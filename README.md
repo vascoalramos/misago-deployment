@@ -4,8 +4,8 @@
 
 ## VM BD
 1. Copy config: `ssh vagrant@10.0.0.102 "mkdir config" && scp -r config/dbs/* vagrant@10.0.0.102:config`
-2. Install PostgreSQL: `sudo apt update && sudo apt install -y postgresql postgresql-contrib`
-3. Enter VM: `ssh vagrant@10.0.0.102`
+2. Enter VM: `ssh vagrant@10.0.0.102`
+3. Install PostgreSQL: `sudo apt update && sudo apt install -y postgresql postgresql-contrib`
 4. Create database and user:
     ```bash
     sudo -u postgres createuser misago
