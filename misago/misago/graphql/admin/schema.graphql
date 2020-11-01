@@ -1,0 +1,32 @@
+enum Status {
+    ERROR
+    WARNING
+    SUCCESS
+}
+
+type Query {
+    analytics(span: Int!): Analytics!
+    version: Version!
+}
+
+type Analytics {
+    attachments: AnalyticsData!
+    dataDownloads: AnalyticsData!
+    posts: AnalyticsData!
+    threads: AnalyticsData!
+    userDeletions: AnalyticsData!
+    users: AnalyticsData!
+}
+
+type AnalyticsData {
+    current: [Int!]!
+    currentCumulative: [Int!]!
+    previous: [Int!]!
+    previousCumulative: [Int!]!
+}
+
+type Version {
+    status: Status!
+    message: String!
+    description: String
+}
