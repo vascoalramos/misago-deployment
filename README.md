@@ -24,8 +24,8 @@
 ## VM SERVER
 1. Copy Misago: `scp -r misago vagrant@10.0.0.101:`
 2. Copy config: `scp -r config/server/.env vagrant@10.0.0.101:misago`
-3. Enter VM: `ssh vagrant@10.0.0.101 && cd misago`
-4. Enable .env: `set -o allexport && source .env && set +o allexport`
+3. Enter VM: `ssh vagrant@10.0.0.101`
+4. Enable .env: `cd misago && set -o allexport && source .env && set +o allexport`
 5. Install packages: `sudo apt update && sudo apt install -y vim libffi-dev libssl-dev sqlite3 libjpeg-dev libopenjp2-7-dev locales cron postgresql-client gettext python3-pip`
 6. Install requirements: `pip3 install --upgrade pip && pip3 install -r requirements.txt && pip3 install -r requirements-plugins.txt`
 7. Run server: `python3 manage.py migrate && python3 manage.py runserver 0.0.0.0:8000`
