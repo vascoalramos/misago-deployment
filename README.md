@@ -1,4 +1,4 @@
-# Deploy Misago
+# Install Misago
 
 **NOTE:** This tutorial assumes that you have the VMs defined in `Vagrantfile` (to ru those VMs: `vagrant up`)
 
