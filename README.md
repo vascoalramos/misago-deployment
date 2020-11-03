@@ -14,3 +14,13 @@
 2. Copy config: `scp -r config/server/* vagrant@10.0.0.101:misago && scp -r config/server/.env vagrant@10.0.0.101:misago`
 3. Enter VM: `ssh vagrant@10.0.0.101`
 4. Install packages ans run server: `bash misago/run.sh`
+
+## Authors
+* **Daniel Regado:** [guiyrt](https://github.com/guiyrt)
+* **Diogo Ferreira:** [DiogoFerreira99](https://github.com/DiogoFerreira99)
+* **Fábio Gonçalves:** [FabioGoncalves](https://github.com/FabioGoncalves)
+* **Filipe Freitas:** [filipejsfreitas](https://github.com/filipejsfreitas)
+* **Vasco Ramos:** [vascoalramos](https://vascoalramos.me)
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
