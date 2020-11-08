@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install postgres
-sudo apt update && sudo apt install -y postgresql postgresql-contrib
+sudo apt-get install -y postgresql postgresql-contrib
 
 # create user 'misago'
 sudo -u postgres createuser misago
@@ -18,9 +18,12 @@ sudo -u postgres psql -c "ALTER USER misago WITH SUPERUSER"
 # allow user 'misago' to access database 'misago'
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE misago to misago"
 
+# stop postgres to replace config files
+sudo systemctl stop postgresql
+
 # insert custom postgresql config
-sudo bash -c 'cat config/postgresql.conf > /etc/postgresql/12/main/postgresql.conf'
-sudo bash -c 'cat config/pg_hba.conf > /etc/postgresql/12/main/pg_hba.conf'
+sudo cp -r postgresql.conf /etc/postgresql/12/main/postgresql.conf
+sudo cp -r pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
 
 # restart postgresql
-sudo systemctl restart postgresql
+sudo systemctl start postgresql

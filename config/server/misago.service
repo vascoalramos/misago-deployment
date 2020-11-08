@@ -1,0 +1,12 @@
+[Unit]
+Description=Misago Web Server
+After=network.target
+
+[Service]
+User=vagrant
+Group=www-data
+WorkingDirectory=/opt/misago
+ExecStart=python3 manage.py runserver 0.0.0.0:8000
+
+[Install]
+WantedBy=multi-user.target
