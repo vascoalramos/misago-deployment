@@ -11,7 +11,10 @@
 <details>
   <summary>Linux</summary>
   
-  Run (this will create two distinct VMs, create DB and make sure all services are up and running: 
+  Run this to:
+   - create two distinct VMs
+   - create DB
+   - run all services 
   ```bash
   vagrant up
   ```
