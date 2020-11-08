@@ -42,7 +42,7 @@ Vagrant.configure("2") do |config|
         end
 
         subconfig.vm.provision "shell", inline: "mkdir -p /opt/misago && chown vagrant:vagrant /opt/misago"
-        #subconfig.vm.provision "file", source: "./misago/", destination: "/opt/misago"
+        subconfig.vm.provision "file", source: "./misago/", destination: "/opt/misago"
         subconfig.vm.provision "file", source: "./config/server/misago.service", destination: "/opt/misago/misago.service"
         subconfig.vm.provision "file", source: "./config/server/.env", destination: "/opt/misago/.env"
         subconfig.vm.provision "file", source: "./config/server/run.sh", destination: "/opt/misago/run.sh"
