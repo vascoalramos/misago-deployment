@@ -53,7 +53,7 @@ DATABASES = {
         "USER": os.environ.get("POSTGRES_USER"),
         "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
         "HOST": os.environ.get("POSTGRES_HOST"),
-        "PORT": 5432,
+        "PORT": int(os.environ.get("POSTGRES_PORT")),
     }
 }
 
@@ -351,7 +351,12 @@ REST_FRAMEWORK = {
 
 # Configure Celery to use Redis as message broker.
 
-CELERY_BROKER_URL = "redis://redis:6379/0"
+REDIS_HOST = os.environ.get("REDIS_HOST")
+REDIS_PORT = os.environ.get("REDIS_PORT")
+REDIS_PASSWORD = os.environ.get("REDIS_PASSWORD")
+
+# CELERY_BROKER_URL = "redis://redis:6379/0"
+CELERY_BROKER_URL = "redis://:{}@{}:{}/0".format(REDIS_PASSWORD, REDIS_HOST, REDIS_PORT)
 
 # Celery workers may leak the memory, eventually depriving the instance of resources.
 # This setting forces celery to stop worker, clean after it and create new one

@@ -1,5 +1,6 @@
 #!/bin/bash
 
+## POSTGRESQL
 # install postgres
 sudo apt-get install -y postgresql postgresql-contrib
 
@@ -27,3 +28,13 @@ sudo cp -r pg_hba.conf /etc/postgresql/12/main/pg_hba.conf
 
 # restart postgresql
 sudo systemctl start postgresql
+
+## REDIS
+# install redis
+sudo apt update && sudo apt install -y redis-server
+
+# add custom redis config files
+sudo mv redis.conf /etc/redis/redis.conf
+
+# restart redis
+sudo systemctl restart redis
