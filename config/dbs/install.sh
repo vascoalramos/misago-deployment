@@ -31,7 +31,7 @@ sudo systemctl start postgresql
 
 ## REDIS
 # install redis
-sudo apt update && sudo apt install -y redis-server
+sudo apt-get update && sudo apt-get install -y redis-server
 
 # add custom redis config files
 sudo mv redis.conf /etc/redis/redis.conf
