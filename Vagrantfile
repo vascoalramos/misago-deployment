@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "bd" do |subconfig|
         subconfig.vm.hostname = "bd"
 
-    	subconfig.vm.network "private_network", ip: "10.0.0.102"
+        subconfig.vm.network "private_network", ip: "10.0.0.102"
 
         subconfig.vm.provider "virtualbox" do |v|
             v.name = "bd"
