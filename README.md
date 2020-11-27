@@ -5,7 +5,15 @@
 <details>
   <summary>Docker</summary>
   
-  ...
+  The Docker deployment contains four components in four containers:
+   - The Frontend Web Server
+   - The Postgres Database
+   - The Redis Cache
+   - The Celery Job Queue
+  To run all of this, use docker-compose on the main directory:
+  ```
+  docker-compose up -d
+  ```
 </details>
 
 <details>
