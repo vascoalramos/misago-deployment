@@ -11,8 +11,8 @@
    - The Redis Cache
    - The Celery Job Queue
   To run all of this, use docker-compose on the main directory:
-  ```
-  docker-compose -f deployment/docker/docker-compose.yml up -d
+  ```bash
+  cd deployment/docker && docker-compose up -d && cd ../..
   ```
 </details>
 
@@ -24,7 +24,7 @@
    - create DB
    - run all services 
   ```bash
-  vagrant up
+  cd deployment/linux && vagrant up && cd ../..
   ```
 </details>
 
