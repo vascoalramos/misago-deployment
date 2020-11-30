@@ -2,7 +2,9 @@ version: "3.8"
 
 services:
     web:
-        build: .
+        build:
+            context: ../..
+            dockerfile: ./deployment/docker/Dockerfile
         ports:
             - 8000:8000
         env_file: .env
@@ -32,7 +34,9 @@ services:
             - REDIS_PASSWORD=${REDIS_PASSWORD}
 
     celery:
-        build: .
+        build:
+            context: ../..
+            dockerfile: ./deployment/docker/Dockerfile
         command: /bin/bash -c "cd /opt/misago && celery -A devproject worker --loglevel=info"
         env_file: .env
         depends_on:

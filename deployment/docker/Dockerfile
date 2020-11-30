@@ -12,6 +12,6 @@ RUN pip3 install -r requirements-plugins.txt
 
 EXPOSE 8000
 
-ADD entrypoint.sh ./
+ADD ./deployment/docker/entrypoint.sh ./
 
 ENTRYPOINT ["/bin/bash", "entrypoint.sh"]

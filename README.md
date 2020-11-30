@@ -12,7 +12,7 @@
    - The Celery Job Queue
   To run all of this, use docker-compose on the main directory:
   ```
-  docker-compose up -d
+  docker-compose -f deployment/docker/docker-compose.yml up -d
   ```
 </details>
 
@@ -29,11 +29,13 @@
 </details>
 
 ## Authors
-* **Daniel Regado:** [guiyrt](https://github.com/guiyrt)
-* **Diogo Ferreira:** [DiogoFerreira99](https://github.com/DiogoFerreira99)
-* **Fábio Gonçalves:** [FabioGoncalves](https://github.com/FabioGoncalves)
-* **Filipe Freitas:** [filipejsfreitas](https://github.com/filipejsfreitas)
-* **Vasco Ramos:** [vascoalramos](https://vascoalramos.me)
+
+-   **Daniel Regado:** [guiyrt](https://github.com/guiyrt)
+-   **Diogo Ferreira:** [DiogoFerreira99](https://github.com/DiogoFerreira99)
+-   **Fábio Gonçalves:** [FabioGoncalves](https://github.com/FabioGoncalves)
+-   **Filipe Freitas:** [filipejsfreitas](https://github.com/filipejsfreitas)
+-   **Vasco Ramos:** [vascoalramos](https://vascoalramos.me)
 
 ## License
+
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
