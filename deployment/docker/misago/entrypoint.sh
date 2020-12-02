@@ -6,11 +6,19 @@ eval "rm -rf /srv/misago/devproject/static"
 eval "python3 manage.py collectstatic"
 echo "Collected static files!"
 
-python3 manage.py migrate
-# python3 manage.py runserver 0.0.0.0:8000
+# 2. Populate the Database
+echo "Migrating database..."
+eval "python3 manage.py migrate"
+if [ $? -eq 0 ]; then
+    echo "Successfuly migrated data!"
+else
+    echo "Error while migrating data!"
+    exit 1
+fi
 
+# 3. Run Gunicorn
+echo "Running Gunicorn..."
 eval "gunicorn ${DJANGO_WSGI_MODULE}:application --config 'gunicorn.conf.py'"
-# eval "gunicorn -b 0.0.0.0:8000 --workers 5 devproject.wsgi:application --access-logformat  'Host:%(h)s %(l)s Username:%(u)s DateOfRequest:%(t)s Method:%(m)s Status:%(s)s URL:%(U)s ReponseLength:%(B)s Agent:%(a)s  ResponseHeader:%({server-timing}o)s' --access-logfile '-' --error-logfile '-'"
 if [ $? -eq 0 ]; then
     echo "Successfuly lauched Gunicorn server!"
 else
