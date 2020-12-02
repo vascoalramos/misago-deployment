@@ -12,6 +12,7 @@ RUN pip3 install -r requirements-plugins.txt
 
 EXPOSE 8000
 
-ADD entrypoint.sh ./
+ADD ./deployment/docker/misago/entrypoint.sh ./
+ADD ./deployment/docker/misago/gunicorn.conf.py ./
 
 ENTRYPOINT ["/bin/bash", "entrypoint.sh"]
