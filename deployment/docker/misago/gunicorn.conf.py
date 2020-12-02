@@ -20,7 +20,7 @@ errorlog = os.environ.get("ERROR_LOG_FILE", "-")
 loglevel = os.environ.get("LOG_LEVEL", "debug")
 
 # Server Socket
-bind = "0.0.0.0:8000"
+bind = "0.0.0.0:80"
 
 # Worker Processes
 workers = multiprocessing.cpu_count() * 2 + 1
