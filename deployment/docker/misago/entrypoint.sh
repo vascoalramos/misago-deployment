@@ -2,8 +2,8 @@
 
 # 1. Collect static files
 echo "Collecting static files..."
-eval "rm -rf /srv/misago/devproject/static"
-eval "python3 manage.py collectstatic"
+eval "rm -rf /opt/misago/devproject/static"
+eval "python3 manage.py collectstatic --no-input"
 echo "Collected static files!"
 
 # 2. Populate the Database

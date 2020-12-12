@@ -22,7 +22,7 @@ loglevel = os.environ.get("LOG_LEVEL", "debug")
 bind = "0.0.0.0:80"
 
 # Worker Processes
-workers = 5
+workers = 2
 worker_connections = int(os.environ.get("WORKER_CONNECTIONS", "1000"))
 
 
