@@ -2,7 +2,12 @@
 
 ## Intermediate Installation
 
-Consering the GCP Vms are already created and configured with docker e docker swarm:
+### Prerequisites
+
+-   GCP VMs are already created and configured with docker e docker swarm
+-   The docker swarm cluster is already created and all necessary nodes(VMs) are registered
+
+### How to run
 
 ```bash
 scp docker-stack.yml <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
