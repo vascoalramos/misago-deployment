@@ -10,8 +10,8 @@
 ### How to run
 
 ```bash
-scp docker-stack.yml <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
-scp .env <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
+scp deployment/docker/docker-stack.yml <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
+scp deployment/docker/.env <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
 ```
 
 On Docker Swarm Master Node shell, to launch the deployment stack:
