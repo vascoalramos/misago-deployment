@@ -115,13 +115,13 @@ MEDIA_URL = "/media/"
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 # https://docs.djangoproject.com/en/1.11/ref/settings/#static-root
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = "/static"
 
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # https://docs.djangoproject.com/en/1.11/ref/settings/#media-root
 
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+MEDIA_ROOT = "/media/"
 
 
 # This setting defines the additional locations the staticfiles app will traverse if the FileSystemFinder finder

@@ -34,7 +34,7 @@ services:
         networks:
             - misago-postgres-in
         volumes:
-            - database-data:/var/lib/postgresql/data/
+            - /nfs/misago/pg:/var/lib/postgresql/data/:z
         deploy:
             replicas: 1
             restart_policy:
@@ -42,7 +42,7 @@ services:
 
     redis:
         image: redis
-        command: redis-server --requirepass ${REDIS_PASSWORD}
+        command: redis-server --requirepass alsosecret
         ports:
             - ${REDIS_PORT}:6379
         networks:
@@ -67,6 +67,9 @@ services:
         depends_on:
             - postgres
             - redis
+        volumes:
+            - /nfs/misago/static_files/:/static:rw
+            - /nfs/misago/media_files/:/media:rw
         deploy:
             replicas: 2
             restart_policy:
@@ -104,10 +107,10 @@ services:
             - misago-out
         depends_on:
             - misago
+        volumes:
+            - /nfs/misago/static_files/:/static:r
+            - /nfs/misago/media_files/:/media:r
         deploy:
             replicas: 2
             restart_policy:
                 condition: on-failure
-
-volumes:
-    database-data:
