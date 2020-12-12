@@ -38,6 +38,10 @@ services:
             - misago-out
         depends_on:
             - misago
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: on-failure
 
     misago:
         image: vascoalramos/misago-app
@@ -52,10 +56,13 @@ services:
         depends_on:
             - postgres
             - redis
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: on-failure
 
     postgres:
         image: postgres
-        restart: unless-stopped
         ports:
             - ${POSTGRES_PORT}:5432
         environment:
@@ -64,20 +71,24 @@ services:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
         networks:
             - misago-postgres-in
-        volumes:
-            - database-data:/var/lib/postgresql/data/
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: on-failure
 
     redis:
         image: redis
         command: redis-server --requirepass ${REDIS_PASSWORD}
-        restart: unless-stopped
         ports:
             - ${REDIS_PORT}:6379
         networks:
             - misago-redis-in
         environment:
             - REDIS_PASSWORD=${REDIS_PASSWORD}
-
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: on-failure
     celery:
         image: vascoalramos/misago-celery
         command: /bin/bash -c "cd /opt/misago && celery -A devproject worker --loglevel=info"
@@ -90,6 +101,7 @@ services:
             - misago
             - postgres
             - redis
-
-volumes:
-    database-data:
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: on-failure
