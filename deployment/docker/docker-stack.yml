@@ -3,24 +3,28 @@ version: "3.8"
 networks:
     # network for App <-> Redis transactions
     misago-redis-in:
-        internal: true
+        driver: overlay
+        internal: false # change to true
     # network for App <-> DB transactions
     misago-postgres-in:
-        internal: true
+        driver: overlay
+        internal: false # change to true
     # network for App <-> Nginx transactions
     misago-nginx:
-        internal: true
+        driver: overlay
+        internal: false # change to true
     # network for * <-> Celery transactions
     misago-celery:
-        internal: true
+        driver: overlay
+        internal: false # change to true
     # this network faces the outside world
     misago-out:
+        driver: overlay
         internal: false
 
 services:
     web:
-        build: web
-        image: misago/web
+        image: vascoalramos/misago-web
         ports:
             - "80:80"
         environment:
@@ -36,10 +40,7 @@ services:
             - misago
 
     misago:
-        build:
-            context: ../..
-            dockerfile: deployment/docker/misago/Dockerfile
-        image: misago/misago
+        image: vascoalramos/misago-app
         ports:
             - ${MISAGO_PORT}:80
         env_file: .env
@@ -78,10 +79,7 @@ services:
             - REDIS_PASSWORD=${REDIS_PASSWORD}
 
     celery:
-        build:
-            context: ../..
-            dockerfile: ./deployment/docker/celery/Dockerfile
-        image: misago/celery
+        image: vascoalramos/misago-celery
         command: /bin/bash -c "cd /opt/misago && celery -A devproject worker --loglevel=info"
         env_file: .env
         networks:
