@@ -1,13 +1,51 @@
 version: "3.8"
 
+networks:
+    # network for App <-> Redis transactions
+    misago-redis-in:
+        internal: true
+    # network for App <-> DB transactions
+    misago-postgres-in:
+        internal: true
+    # network for App <-> Nginx transactions
+    misago-nginx:
+        internal: true
+    # network for * <-> Celery transactions
+    misago-celery:
+        internal: true
+    # this network faces the outside world
+    misago-out:
+        internal: false
+
 services:
     web:
+        build: web
+        ports:
+            - "80:80"
+        environment:
+            # use app service's hostname
+            - APP_HOST=misago
+            # talk to the port within the bridge network without (over)exposing ports
+            - APP_PORT_NUMBER=80
+            - HOST_MONITORING_TAG=nginx-
+        networks:
+            - misago-nginx
+            - misago-out
+        depends_on:
+            - misago
+
+    misago:
         build:
             context: ../..
-            dockerfile: ./deployment/docker/misago/Dockerfile
+            dockerfile: deployment/docker/misago/Dockerfile
         ports:
             - ${MISAGO_PORT}:80
         env_file: .env
+        networks:
+            - misago-redis-in
+            - misago-postgres-in
+            - misago-celery
+            - misago-nginx
         depends_on:
             - postgres
             - redis
@@ -21,6 +59,8 @@ services:
             - POSTGRES_DB=${POSTGRES_DB}
             - POSTGRES_USER=${POSTGRES_USER}
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        networks:
+            - misago-postgres-in
         volumes:
             - database-data:/var/lib/postgresql/data/
 
@@ -30,16 +70,23 @@ services:
         restart: unless-stopped
         ports:
             - ${REDIS_PORT}:6379
+        networks:
+            - misago-redis-in
         environment:
             - REDIS_PASSWORD=${REDIS_PASSWORD}
 
     celery:
         build:
             context: ../..
-            dockerfile: ./deployment/docker/misago/Dockerfile
+            dockerfile: ./deployment/docker/celery/Dockerfile
         command: /bin/bash -c "cd /opt/misago && celery -A devproject worker --loglevel=info"
         env_file: .env
+        networks:
+            - misago-redis-in
+            - misago-postgres-in
+            - misago-celery
         depends_on:
+            - misago
             - postgres
             - redis
 
