@@ -6,6 +6,8 @@
 
 -   GCP VMs are already created and configured with docker e docker swarm
 -   The docker swarm cluster is already created and all necessary nodes(VMs) are registered
+-   So the system works as intended, it is needed to create NFS volumes accordingly with the volumes defined in [docker-stack.yml](deployment/docker/docker-stack.yml). To create those, follow the steps specified in [
+    How To Set Up an NFS Mount on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-20-04)
 
 ### How to run
 
