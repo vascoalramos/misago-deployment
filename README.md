@@ -1,5 +1,21 @@
 # Misago Deployment
 
+## Intermediate Installation
+
+Consering the GCP Vms are already created and configured with docker e docker swarm:
+
+```bash
+scp docker-stack.yml <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
+scp .env <DOCKER_SWARM_MASTER_NODE_EXTERNAL_IP>:
+```
+
+On Docker Swarm Master Node shell, to launch the deployment stack:
+
+```bash
+set -o allexport; source .env; set +o allexport
+docker stack deploy -c docker-stack.yml misago
+```
+
 ## Basic Installation
 
 <details>
