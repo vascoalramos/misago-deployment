@@ -1,0 +1,265 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "Overview of VSphere host and cluster metrics",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"5a175530-7b6d-4d40-af46-5c0c518a97bb\", \"x\": 0, \"y\": 0, \"w\": 24, \"h\": 15}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"5a175530-7b6d-4d40-af46-5c0c518a97bb\", \"version\": \"7.4.0\"}, {\"gridData\": {\"i\": \"39b334e1-c61e-42c3-8e2f-ac534a19a986\", \"x\": 24, \"y\": 0, \"w\": 24, \"h\": 15}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"39b334e1-c61e-42c3-8e2f-ac534a19a986\", \"version\": \"7.4.0\"}, {\"gridData\": {\"i\": \"5eb32eda-4f81-490e-a86f-6fc65ea3892a\", \"x\": 0, \"y\": 15, \"w\": 24, \"h\": 15}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"5eb32eda-4f81-490e-a86f-6fc65ea3892a\", \"version\": \"7.4.0\"}, {\"gridData\": {\"i\": \"1c91b931-f2ec-4284-90eb-4b257f6f7904\", \"x\": 0, \"y\": 30, \"w\": 48, \"h\": 20}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"1c91b931-f2ec-4284-90eb-4b257f6f7904\", \"version\": \"7.4.0\"}, {\"gridData\": {\"i\": \"712d4e28-54ad-452f-9f00-525764d4850d\", \"x\": 0, \"y\": 50, \"w\": 48, \"h\": 18}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"712d4e28-54ad-452f-9f00-525764d4850d\", \"version\": \"7.4.0\"}, {\"gridData\": {\"i\": \"b8b5096a-30e1-4249-b8ca-eb4509b4ba59\", \"x\": 0, \"y\": 68, \"w\": 48, \"h\": 18}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"b8b5096a-30e1-4249-b8ca-eb4509b4ba59\", \"version\": \"7.4.0\"}, {\"gridData\": {\"i\": \"e561ff05-9f8f-4412-a2e1-d656cb965e96\", \"x\": 24, \"y\": 15, \"w\": 24, \"h\": 15}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_6\", \"panelIndex\": \"e561ff05-9f8f-4412-a2e1-d656cb965e96\", \"version\": \"7.4.0\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat VSphere] Hosts Overview ECS",
+                "version": 1
+            },
+            "id": "0ebd0be0-f049-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "references": [
+                {
+                    "id": "ab07c5d0-f03f-11e9-aaf3-15199b632da7",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "47125df0-f040-11e9-aaf3-15199b632da7",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "783f2c50-f040-11e9-aaf3-15199b632da7",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "867e0c70-f048-11e9-aaf3-15199b632da7",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "5f74c330-f048-11e9-aaf3-15199b632da7",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "79dcd290-f047-11e9-aaf3-15199b632da7",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "d6370680-f049-11e9-aaf3-15199b632da7",
+                    "name": "panel_6",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2019-10-19T09:21:42.191Z",
+            "version": "WzY4NiwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Free vs Used CPU on Cluster stacked [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"times\": [], \"thresholdLine\": {\"style\": \"full\", \"show\": false, \"value\": 10, \"width\": 1, \"color\": \"#34130C\"}, \"legendPosition\": \"right\", \"seriesParams\": [{\"valueAxis\": \"ValueAxis-1\", \"interpolate\": \"linear\", \"type\": \"area\", \"showCircles\": true, \"show\": \"true\", \"data\": {\"label\": \"Free\", \"id\": \"1\"}, \"mode\": \"normal\", \"drawLinesBetweenPoints\": true}, {\"valueAxis\": \"ValueAxis-1\", \"interpolate\": \"linear\", \"type\": \"area\", \"showCircles\": true, \"show\": true, \"data\": {\"label\": \"Used\", \"id\": \"3\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true}], \"addTooltip\": true, \"type\": \"area\", \"valueAxes\": [{\"style\": {}, \"title\": {\"text\": \"Free\"}, \"type\": \"value\", \"position\": \"left\", \"show\": true, \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"id\": \"ValueAxis-1\", \"name\": \"LeftAxis-1\", \"labels\": {\"rotate\": 0, \"show\": true, \"filter\": false, \"truncate\": 100}}], \"addTimeMarker\": false, \"categoryAxes\": [{\"style\": {}, \"title\": {}, \"type\": \"category\", \"position\": \"bottom\", \"show\": true, \"scale\": {\"type\": \"linear\"}, \"id\": \"CategoryAxis-1\", \"labels\": {\"truncate\": 100, \"show\": true, \"filter\": true}}], \"dimensions\": {\"x\": {\"format\": {\"params\": {\"pattern\": \"HH:mm:ss\"}, \"id\": \"date\"}, \"accessor\": 0, \"params\": {\"bounds\": {\"min\": \"2019-10-16T17:49:26.629Z\", \"max\": \"2019-10-16T18:04:26.629Z\"}, \"date\": true, \"interval\": \"PT30S\", \"format\": \"HH:mm:ss\"}, \"aggType\": \"date_histogram\"}, \"y\": [{\"format\": {\"id\": \"number\"}, \"accessor\": 1, \"params\": {}, \"aggType\": \"max\"}, {\"format\": {\"id\": \"number\"}, \"accessor\": 2, \"params\": {}, \"aggType\": \"max\"}]}, \"grid\": {\"categoryLines\": false}, \"labels\": {}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"vsphere.host.cpu.free.mhz\", \"customLabel\": \"Free\"}, \"id\": \"1\", \"type\": \"max\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"interval\": \"auto\", \"min_doc_count\": 1, \"timeRange\": {\"to\": \"now\", \"from\": \"now-15m\"}, \"field\": \"@timestamp\", \"useNormalizedEsInterval\": true, \"extended_bounds\": {}, \"drop_partials\": false}, \"id\": \"2\", \"type\": \"date_histogram\"}, {\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"vsphere.host.cpu.used.mhz\", \"customLabel\": \"Used\"}, \"id\": \"3\", \"type\": \"max\"}], \"type\": \"area\", \"title\": \"Free vs Used CPU on Cluster stacked [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "ab07c5d0-f03f-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [
+                {
+                    "id": "1411b690-f017-11e9-aaf3-15199b632da7",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMwNywxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Cluster Memory free vs used stacked [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"times\": [], \"thresholdLine\": {\"style\": \"full\", \"show\": false, \"value\": 10, \"width\": 1, \"color\": \"#34130C\"}, \"legendPosition\": \"right\", \"seriesParams\": [{\"valueAxis\": \"ValueAxis-1\", \"interpolate\": \"cardinal\", \"type\": \"area\", \"showCircles\": true, \"show\": true, \"data\": {\"label\": \"Used\", \"id\": \"2\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true}, {\"valueAxis\": \"ValueAxis-1\", \"interpolate\": \"cardinal\", \"type\": \"area\", \"showCircles\": true, \"show\": \"true\", \"data\": {\"label\": \"Free\", \"id\": \"1\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true}], \"addTooltip\": true, \"type\": \"area\", \"valueAxes\": [{\"style\": {}, \"title\": {\"text\": \"\"}, \"type\": \"value\", \"position\": \"left\", \"show\": true, \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"id\": \"ValueAxis-1\", \"name\": \"LeftAxis-1\", \"labels\": {\"rotate\": 0, \"show\": true, \"filter\": false, \"truncate\": 100}}], \"addTimeMarker\": false, \"categoryAxes\": [{\"style\": {}, \"title\": {}, \"type\": \"category\", \"position\": \"bottom\", \"show\": true, \"scale\": {\"type\": \"linear\"}, \"id\": \"CategoryAxis-1\", \"labels\": {\"truncate\": 100, \"show\": true, \"filter\": true}}], \"dimensions\": {\"x\": {\"format\": {\"params\": {\"pattern\": \"HH:mm:ss\"}, \"id\": \"date\"}, \"accessor\": 0, \"params\": {\"bounds\": {\"min\": \"2019-10-16T17:55:00.451Z\", \"max\": \"2019-10-16T18:10:00.451Z\"}, \"date\": true, \"interval\": \"PT30S\", \"format\": \"HH:mm:ss\"}, \"aggType\": \"date_histogram\"}, \"y\": [{\"format\": {\"id\": \"bytes\"}, \"accessor\": 1, \"params\": {}, \"aggType\": \"max\"}, {\"format\": {\"id\": \"bytes\"}, \"accessor\": 2, \"params\": {}, \"aggType\": \"max\"}]}, \"grid\": {\"categoryLines\": false}, \"labels\": {}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"vsphere.host.memory.used.bytes\", \"customLabel\": \"Used\"}, \"id\": \"2\", \"type\": \"max\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"interval\": \"auto\", \"min_doc_count\": 1, \"timeRange\": {\"to\": \"now\", \"from\": \"now-15m\"}, \"field\": \"@timestamp\", \"useNormalizedEsInterval\": true, \"extended_bounds\": {}, \"drop_partials\": false}, \"id\": \"3\", \"type\": \"date_histogram\"}, {\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"vsphere.host.memory.free.bytes\", \"customLabel\": \"Free\"}, \"id\": \"1\", \"type\": \"max\"}], \"type\": \"area\", \"title\": \"Cluster Memory free vs used stacked [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "47125df0-f040-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [
+                {
+                    "id": "1411b690-f017-11e9-aaf3-15199b632da7",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMwOCwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Free vs Used Datastore [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"times\": [], \"thresholdLine\": {\"style\": \"full\", \"show\": false, \"value\": 10, \"width\": 1, \"color\": \"#34130C\"}, \"legendPosition\": \"right\", \"seriesParams\": [{\"valueAxis\": \"ValueAxis-1\", \"interpolate\": \"linear\", \"type\": \"area\", \"showCircles\": true, \"show\": true, \"data\": {\"label\": \"Used\", \"id\": \"2\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true}, {\"valueAxis\": \"ValueAxis-1\", \"interpolate\": \"linear\", \"type\": \"area\", \"showCircles\": true, \"show\": \"true\", \"data\": {\"label\": \"Free\", \"id\": \"1\"}, \"mode\": \"stacked\", \"drawLinesBetweenPoints\": true}], \"addTooltip\": true, \"type\": \"area\", \"valueAxes\": [{\"style\": {}, \"title\": {\"text\": \"Free\"}, \"type\": \"value\", \"position\": \"left\", \"show\": true, \"scale\": {\"mode\": \"normal\", \"type\": \"linear\"}, \"id\": \"ValueAxis-1\", \"name\": \"LeftAxis-1\", \"labels\": {\"rotate\": 0, \"show\": true, \"filter\": false, \"truncate\": 100}}], \"addTimeMarker\": false, \"categoryAxes\": [{\"style\": {}, \"title\": {}, \"type\": \"category\", \"position\": \"bottom\", \"show\": true, \"scale\": {\"type\": \"linear\"}, \"id\": \"CategoryAxis-1\", \"labels\": {\"truncate\": 100, \"show\": true, \"filter\": true}}], \"dimensions\": {\"x\": {\"format\": {\"params\": {\"pattern\": \"HH:mm:ss\"}, \"id\": \"date\"}, \"accessor\": 0, \"params\": {\"bounds\": {\"min\": \"2019-10-16T17:56:40.605Z\", \"max\": \"2019-10-16T18:11:40.605Z\"}, \"date\": true, \"interval\": \"PT30S\", \"format\": \"HH:mm:ss\"}, \"aggType\": \"date_histogram\"}, \"y\": [{\"format\": {\"id\": \"bytes\"}, \"accessor\": 1, \"params\": {}, \"aggType\": \"max\"}, {\"format\": {\"id\": \"bytes\"}, \"accessor\": 2, \"params\": {}, \"aggType\": \"max\"}]}, \"grid\": {\"categoryLines\": false}, \"labels\": {}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"vsphere.datastore.capacity.used.bytes\", \"customLabel\": \"Used\"}, \"id\": \"2\", \"type\": \"max\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"interval\": \"auto\", \"min_doc_count\": 1, \"timeRange\": {\"to\": \"now\", \"from\": \"now-15m\"}, \"field\": \"@timestamp\", \"useNormalizedEsInterval\": true, \"extended_bounds\": {}, \"drop_partials\": false}, \"id\": \"3\", \"type\": \"date_histogram\"}, {\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"vsphere.datastore.capacity.free.bytes\", \"customLabel\": \"Free\"}, \"id\": \"1\", \"type\": \"max\"}], \"type\": \"area\", \"title\": \"Free vs Used Datastore [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "783f2c50-f040-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [
+                {
+                    "id": "1411b690-f017-11e9-aaf3-15199b632da7",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMwOSwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Host top RAM util [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"gauge_style\": \"half\", \"type\": \"gauge\", \"series\": [{\"terms_field\": \"vsphere.host.name\", \"split_mode\": \"terms\", \"formatter\": \"percent\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"\", \"metrics\": [{\"field\": \"vsphere.host.memory.total.bytes\", \"type\": \"max\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}, {\"field\": \"vsphere.host.memory.free.bytes\", \"type\": \"max\", \"id\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\"}, {\"variables\": [{\"field\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"name\": \"total\", \"id\": \"5fadf110-f047-11e9-8ffe-6377df51c23d\"}, {\"field\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\", \"name\": \"used\", \"id\": \"61c84590-f047-11e9-8ffe-6377df51c23d\"}], \"id\": \"5e69b140-f047-11e9-8ffe-6377df51c23d\", \"type\": \"calculation\", \"script\": \"params.used / params.total\"}], \"terms_order_by\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(59,244,64,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": {\"query\": \"event.module : \\\"vsphere\\\" \", \"language\": \"kuery\"}, \"gauge_width\": 10, \"background_color\": null, \"axis_position\": \"left\", \"gauge_color_rules\": [{\"value\": 0.35, \"gauge\": \"rgba(252,220,0,1)\", \"id\": \"3e4e64a0-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gt\"}, {\"value\": 0.7, \"gauge\": \"rgba(251,158,0,1)\", \"id\": \"8e4a5090-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gte\"}, {\"value\": 0.95, \"text\": null, \"gauge\": \"rgba(159,5,0,1)\", \"id\": \"93d7d2d0-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gte\"}], \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"ignore_global_filter\": 0, \"interval\": \"\", \"show_grid\": 1, \"gauge_max\": \"1\", \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Host top RAM util [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "867e0c70-f048-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMxMCwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Host top CPU util [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"gauge_style\": \"half\", \"type\": \"gauge\", \"series\": [{\"terms_field\": \"vsphere.host.name\", \"split_mode\": \"terms\", \"formatter\": \"percent\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"\", \"metrics\": [{\"field\": \"vsphere.host.cpu.total.mhz\", \"type\": \"max\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}, {\"field\": \"vsphere.host.cpu.used.mhz\", \"type\": \"max\", \"id\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\"}, {\"variables\": [{\"field\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"name\": \"total\", \"id\": \"5fadf110-f047-11e9-8ffe-6377df51c23d\"}, {\"field\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\", \"name\": \"used\", \"id\": \"61c84590-f047-11e9-8ffe-6377df51c23d\"}], \"id\": \"5e69b140-f047-11e9-8ffe-6377df51c23d\", \"type\": \"calculation\", \"script\": \"params.used / params.total\"}], \"terms_order_by\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(59,244,64,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": {\"query\": \"event.module : \\\"vsphere\\\" \", \"language\": \"kuery\"}, \"gauge_width\": 10, \"background_color\": null, \"axis_position\": \"left\", \"gauge_color_rules\": [{\"value\": 0.35, \"gauge\": \"rgba(252,220,0,1)\", \"id\": \"3e4e64a0-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gt\"}, {\"value\": 0.7, \"gauge\": \"rgba(251,158,0,1)\", \"id\": \"8e4a5090-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gte\"}, {\"value\": 0.95, \"text\": null, \"gauge\": \"rgba(159,5,0,1)\", \"id\": \"93d7d2d0-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gte\"}], \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"ignore_global_filter\": 0, \"interval\": \"\", \"show_grid\": 1, \"gauge_max\": \"1\", \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Host top CPU util [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "5f74c330-f048-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMxMSwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Top Datastore Used [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"gauge_style\": \"half\", \"type\": \"gauge\", \"series\": [{\"terms_field\": \"vsphere.datastore.name\", \"split_mode\": \"terms\", \"formatter\": \"percent\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"\", \"metrics\": [{\"field\": \"vsphere.datastore.capacity.total.bytes\", \"type\": \"max\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}, {\"field\": \"vsphere.datastore.capacity.used.bytes\", \"type\": \"max\", \"id\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\"}, {\"field\": \"vsphere.datastore.capacity.used.pct\", \"type\": \"max\", \"id\": \"5aec7160-f047-11e9-8ffe-6377df51c23d\"}, {\"variables\": [{\"field\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"name\": \"total\", \"id\": \"5fadf110-f047-11e9-8ffe-6377df51c23d\"}, {\"field\": \"51de05c0-f047-11e9-8ffe-6377df51c23d\", \"name\": \"used\", \"id\": \"61c84590-f047-11e9-8ffe-6377df51c23d\"}], \"id\": \"5e69b140-f047-11e9-8ffe-6377df51c23d\", \"type\": \"calculation\", \"script\": \"params.used / params.total\"}], \"terms_order_by\": \"5aec7160-f047-11e9-8ffe-6377df51c23d\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(59,244,64,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": {\"query\": \"event.module : \\\"vsphere\\\" \", \"language\": \"kuery\"}, \"gauge_width\": 10, \"background_color\": null, \"axis_position\": \"left\", \"gauge_color_rules\": [{\"value\": 0.35, \"gauge\": \"rgba(252,220,0,1)\", \"id\": \"3e4e64a0-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gt\"}, {\"value\": 0.7, \"gauge\": \"rgba(251,158,0,1)\", \"id\": \"8e4a5090-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gte\"}, {\"value\": 0.95, \"text\": null, \"gauge\": \"rgba(159,5,0,1)\", \"id\": \"93d7d2d0-f047-11e9-8ffe-6377df51c23d\", \"operator\": \"gte\"}], \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"ignore_global_filter\": 0, \"interval\": \"\", \"show_grid\": 1, \"gauge_max\": \"1\", \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Top Datastore Used [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "79dcd290-f047-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMxMiwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "savedSearchRefName": "search_0",
+                "title": "Datastore Types [Metricbeat VSphere] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"dimensions\": {\"metric\": {\"format\": {\"id\": \"number\"}, \"accessor\": 0, \"params\": {}, \"aggType\": \"count\"}}, \"type\": \"pie\", \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"labels\": {\"truncate\": 100, \"show\": false, \"last_level\": true, \"values\": true}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {}, \"id\": \"1\", \"type\": \"count\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"size\": 5, \"field\": \"vsphere.datastore.fstype\", \"otherBucket\": false, \"orderBy\": \"1\", \"order\": \"desc\", \"missingBucketLabel\": \"Missing\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\"}, \"id\": \"2\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"Datastore types [Metricbeat VSphere] ECS\"}"
+            },
+            "id": "d6370680-f049-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "visualization": "7.3.1"
+            },
+            "references": [
+                {
+                    "id": "1411b690-f017-11e9-aaf3-15199b632da7",
+                    "name": "search_0",
+                    "type": "search"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMxMywxXQ=="
+        },
+        {
+            "attributes": {
+                "columns": [
+                    "_source"
+                ],
+                "description": "",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"version\": true, \"filter\": [], \"query\": {\"query\": \"event.module: \\\"vsphere\\\" \", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "sort": [
+                    [
+                        "@timestamp",
+                        "desc"
+                    ]
+                ],
+                "title": "search for event module vsphere [Metricbeat VSphere] ECS",
+                "version": 1
+            },
+            "id": "1411b690-f017-11e9-aaf3-15199b632da7",
+            "migrationVersion": {
+                "search": "7.4.0"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "search",
+            "updated_at": "2019-10-19T09:14:27.107Z",
+            "version": "WzMwNiwxXQ=="
+        }
+    ],
+    "version": "7.4.0"
+}

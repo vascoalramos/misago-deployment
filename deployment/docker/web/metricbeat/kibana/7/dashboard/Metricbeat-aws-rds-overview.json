@@ -1,0 +1,234 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "Overview of AWS RDS Metrics",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"1\", \"x\": 10, \"y\": 0, \"w\": 19, \"h\": 6}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"1\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Database Connections\"}, \"title\": \"Database Connections\"}, {\"gridData\": {\"i\": \"3\", \"x\": 0, \"y\": 6, \"w\": 24, \"h\": 10}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"3\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Insert Latency in Milliseconds\"}, \"title\": \"Insert Latency in Milliseconds\"}, {\"gridData\": {\"i\": \"4\", \"x\": 24, \"y\": 6, \"w\": 24, \"h\": 10}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"4\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Select Latency in Milliseconds\"}, \"title\": \"Select Latency in Milliseconds\"}, {\"gridData\": {\"i\": \"5\", \"x\": 29, \"y\": 0, \"w\": 19, \"h\": 6}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"5\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Transaction Blocked\"}, \"title\": \"Transaction Blocked\"}, {\"gridData\": {\"i\": \"6\", \"x\": 0, \"y\": 0, \"w\": 10, \"h\": 6}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"6\", \"version\": \"7.3.0\"}, {\"gridData\": {\"i\": \"7\", \"x\": 0, \"y\": 16, \"w\": 24, \"h\": 11}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"7\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Insert Throughput in Count/Second\"}, \"title\": \"Insert Throughput in Count/Second\"}, {\"gridData\": {\"i\": \"8\", \"x\": 24, \"y\": 16, \"w\": 24, \"h\": 11}, \"panelRefName\": \"panel_6\", \"panelIndex\": \"8\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Select Throughput in Count/Second\"}, \"title\": \"Select Throughput in Count/Second\"}, {\"gridData\": {\"i\": \"132653bc-2669-4e8c-b536-06c680e9acf0\", \"x\": 0, \"y\": 27, \"w\": 48, \"h\": 12}, \"panelRefName\": \"panel_7\", \"panelIndex\": \"132653bc-2669-4e8c-b536-06c680e9acf0\", \"version\": \"7.3.0\", \"embeddableConfig\": {\"title\": \"Disk Queue Depth\"}, \"title\": \"Disk Queue Depth\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat AWS] RDS Overview",
+                "version": 1
+            },
+            "id": "3367c170-921f-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "references": [
+                {
+                    "id": "17fcda50-921b-11e9-aa19-159bf182e06f",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "8b8a7f80-921c-11e9-aa19-159bf182e06f",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "cc3a1950-921c-11e9-aa19-159bf182e06f",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "00b29040-921d-11e9-aa19-159bf182e06f",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b5308940-7347-11e9-816b-07687310a99a",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "c1afd130-921e-11e9-aa19-159bf182e06f",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "e06e4cf0-921e-11e9-aa19-159bf182e06f",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "966ae990-d979-11e9-9458-bbef63ad717b",
+                    "name": "panel_7",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2019-09-17T18:35:03.575Z",
+            "version": "WzExNTk3LDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Database Connections [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"10bc2760-d978-11e9-aff2-99c15d8b7da1\"}], \"interval\": \"1m\", \"type\": \"metric\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"color\": \"#68BC00\", \"split_mode\": \"everything\", \"formatter\": \"number\", \"chart_type\": \"bar\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"Database Connections\", \"metrics\": [{\"field\": \"aws.rds.database_connections\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"line_width\": 1, \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"hide_in_legend\": 0}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Database Connections [Metricbeat AWS]\"}"
+            },
+            "id": "17fcda50-921b-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:22:36.018Z",
+            "version": "WzExNTc3LDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Insert Latency in Milliseconds [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"1m\", \"show_grid\": 1, \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"28cacdf0-921c-11e9-badf-4b42bd1ef543\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"ms,ms,\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Insert Latency in Milliseconds\", \"metrics\": [{\"field\": \"aws.rds.latency.insert\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": \"0\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Insert Latency in Milliseconds [Metricbeat AWS]\"}"
+            },
+            "id": "8b8a7f80-921c-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:27:15.143Z",
+            "version": "WzExNTg1LDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Select Latency in Milliseconds [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"28cacdf0-921c-11e9-badf-4b42bd1ef543\"}], \"interval\": \"1m\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"ms,ms,\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Select Latency in Milliseconds\", \"metrics\": [{\"field\": \"aws.rds.latency.select\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Select Latency in Milliseconds [Metricbeat AWS]\"}"
+            },
+            "id": "cc3a1950-921c-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:26:36.223Z",
+            "version": "WzExNTgzLDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Transaction Blocked [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"value\": 0, \"background_color\": \"rgba(164,221,0,1)\", \"id\": \"27aaf910-d978-11e9-aff2-99c15d8b7da1\", \"operator\": \"lte\"}, {\"operator\": \"gt\", \"value\": 0, \"id\": \"3526a9e0-d978-11e9-aff2-99c15d8b7da1\", \"color\": \"rgba(244,78,59,1)\"}], \"drilldown_url\": \"\", \"interval\": \"1m\", \"type\": \"metric\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"color\": \"#68BC00\", \"split_mode\": \"everything\", \"formatter\": \"number\", \"chart_type\": \"bar\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"Transaction Blocked\", \"metrics\": [{\"field\": \"aws.rds.transactions.blocked\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"line_width\": 1, \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"hide_in_legend\": 0}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"filter\": \"\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"bar_color_rules\": [{\"value\": 0, \"bar_color\": \"rgba(211,49,21,1)\", \"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\", \"operator\": \"gt\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Transaction Blocked [Metricbeat AWS]\"}"
+            },
+            "id": "00b29040-921d-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:23:33.361Z",
+            "version": "WzExNTc5LDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Region Filter [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"updateFiltersOnChange\": true, \"useTimeFilter\": false, \"controls\": [{\"label\": \"region\", \"type\": \"list\", \"fieldName\": \"cloud.region\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549397251041\", \"indexPatternRefName\": \"control_0_index_pattern\"}], \"pinFilters\": false}, \"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"AWS Region Filter\"}"
+            },
+            "id": "b5308940-7347-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_0_index_pattern",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:20:56.488Z",
+            "version": "WzExMjUzLDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Insert Throughput in Count/Second [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"1m\", \"show_grid\": 1, \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"28cacdf0-921c-11e9-badf-4b42bd1ef543\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"'0.0'\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Insert Throughput Count/Second\", \"metrics\": [{\"field\": \"aws.rds.throughput.insert\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": \"0\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Insert Throughput in Count/Second [Metricbeat AWS]\"}"
+            },
+            "id": "c1afd130-921e-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:31:36.123Z",
+            "version": "WzExNTkzLDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Select Throughput in Count/Second [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"1m\", \"show_grid\": 1, \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"28cacdf0-921c-11e9-badf-4b42bd1ef543\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"'0.0'\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Select Throughput Count/Second\", \"metrics\": [{\"field\": \"aws.rds.throughput.select\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": \"\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Select Throughput in Count/Second [Metricbeat AWS]\"}"
+            },
+            "id": "e06e4cf0-921e-11e9-aa19-159bf182e06f",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:31:01.587Z",
+            "version": "WzExNTkyLDhd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "RDS Disk Queue Depth [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"1m\", \"show_grid\": 1, \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"28cacdf0-921c-11e9-badf-4b42bd1ef543\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"aws.rds.db_instance.identifier\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"'0.000'\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Select Throughput Count/Second\", \"metrics\": [{\"field\": \"aws.rds.disk_queue_depth\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": \"0\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"f8196690-921a-11e9-badf-4b42bd1ef543\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"RDS Disk Queue Depth [Metricbeat AWS]\"}"
+            },
+            "id": "966ae990-d979-11e9-9458-bbef63ad717b",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-17T18:33:04.936Z",
+            "version": "WzExNTk1LDhd"
+        }
+    ],
+    "version": "7.3.0"
+}
