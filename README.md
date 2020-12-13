@@ -8,6 +8,16 @@
 -   The docker swarm cluster is already created and all necessary nodes(VMs) are registered
 -   So the system works as intended, it is needed to create NFS volumes accordingly with the volumes defined in [docker-stack.yml](deployment/docker/docker-stack.yml). To create those, follow the steps specified in [
     How To Set Up an NFS Mount on Ubuntu 20.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-nfs-mount-on-ubuntu-20-04)
+-   Consider that the VM name `vr-vm3` is the host monitoring VM, so this one should be up and running with the services **elasticsearch** and **kibana**.
+    All remaining services are configured to communicate and report to this VM.
+
+    -   To run those services:
+
+        ```bash
+        sudo sysctl -w vm.max_map_count=262144
+        ./elasticsearch-7.10.1/bin/elasticsearch -d
+        nohup ./kibana-7.10.1-linux-x86_64/bin/kibana &
+        ```
 
 ### How to run
 

@@ -1,0 +1,2 @@
+deployment/docker/web/filebeat/filebeat filter=lfs diff=lfs merge=lfs -text
+deployment/docker/web/metricbeat/metricbeat filter=lfs diff=lfs merge=lfs -text

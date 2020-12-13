@@ -1,0 +1,2 @@
+2020-12-13T12:25:15.064Z	INFO	instance/beat.go:645	Home path: [/home/vr/Projects/misago-deployment/deployment/docker/web/filebeat] Config path: [/home/vr/Projects/misago-deployment/deployment/docker/web/filebeat] Data path: [/home/vr/Projects/misago-deployment/deployment/docker/web/filebeat/data] Logs path: [/home/vr/Projects/misago-deployment/deployment/docker/web/filebeat/logs]
+2020-12-13T12:25:15.068Z	INFO	instance/beat.go:653	Beat ID: 1ba8d9c9-d691-465b-b7de-e982e80c26e2

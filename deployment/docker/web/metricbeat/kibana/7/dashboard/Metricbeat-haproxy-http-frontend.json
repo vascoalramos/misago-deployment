@@ -1,0 +1,23 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "HAProxy frontend metrics",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"highlightAll\": true, \"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"version\": true}"
+                },
+                "optionsJSON": "{\"darkTheme\": false, \"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"3\", \"x\": 6, \"y\": 3, \"w\": 6, \"h\": 3}, \"version\": \"6.2.2\", \"id\": \"86159190-47c5-11e8-bc13-1397384faad3-ecs\", \"panelIndex\": \"3\", \"type\": \"visualization\"}, {\"gridData\": {\"i\": \"4\", \"x\": 0, \"y\": 0, \"w\": 12, \"h\": 3}, \"version\": \"6.2.2\", \"id\": \"fcbdfa60-47bd-11e8-bc13-1397384faad3-ecs\", \"panelIndex\": \"4\", \"type\": \"visualization\"}, {\"gridData\": {\"i\": \"5\", \"x\": 0, \"y\": 3, \"w\": 6, \"h\": 3}, \"version\": \"6.2.2\", \"id\": \"30956d00-47d7-11e8-bc13-1397384faad3-ecs\", \"panelIndex\": \"5\", \"type\": \"visualization\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat HAProxy] HTTP frontend ECS",
+                "version": 1
+            },
+            "id": "e9057ae0-47c5-11e8-bc13-1397384faad3-ecs",
+            "type": "dashboard",
+            "updated_at": "2018-04-24T18:34:15.954Z",
+            "version": 5
+        }
+    ],
+    "version": "6.2.2"
+}
