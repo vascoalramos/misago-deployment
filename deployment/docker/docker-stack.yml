@@ -4,19 +4,19 @@ networks:
     # network for App <-> Redis transactions
     misago-redis-in:
         driver: overlay
-        internal: false # change to true
+        internal: true
     # network for App <-> DB transactions
     misago-postgres-in:
         driver: overlay
-        internal: false # change to true
+        internal: true
     # network for App <-> Nginx transactions
     misago-nginx:
         driver: overlay
-        internal: false # change to true
+        internal: true
     # network for * <-> Celery transactions
     misago-celery:
         driver: overlay
-        internal: false # change to true
+        internal: true
     # this network faces the outside world
     misago-out:
         driver: overlay
