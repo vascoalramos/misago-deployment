@@ -21,6 +21,10 @@ networks:
     misago-out:
         driver: overlay
         internal: false
+    # this network is used to connect with elasticsearch instance
+    monitor:
+        driver: overlay
+        internal: false
 
 services:
     postgres:

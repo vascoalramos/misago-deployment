@@ -16,7 +16,7 @@ networks:
     # this network faces the outside world
     misago-out:
         internal: false
-    #this network is used co connect with elasticsearch instance
+    # this network is used to connect with elasticsearch instance
     monitor:
         internal: false
 
