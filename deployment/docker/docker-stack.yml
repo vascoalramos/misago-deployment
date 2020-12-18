@@ -108,13 +108,10 @@ services:
     web:
         image: vascoalramos/misago-web
         ports:
-            - "80:80"
+            - 80:80
         environment:
-            # use app service's hostname
             - APP_HOST=misago
-            # talk to the port within the bridge network without (over)exposing ports
             - APP_PORT_NUMBER=80
-            - HOST_MONITORING_TAG=nginx-
         networks:
             - misago-nginx
             - misago-out
