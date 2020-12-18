@@ -16,6 +16,9 @@ networks:
     # this network faces the outside world
     misago-out:
         internal: false
+    #this network is used co connect with elasticsearch instance
+    monitor:
+        internal: false
 
 services:
     web:
@@ -61,8 +64,22 @@ services:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
         networks:
             - misago-postgres-in
+            - monitor
         volumes:
             - database-data:/var/lib/postgresql/data/
+
+    metricbeat:
+        image: docker.elastic.co/beats/metricbeat:7.1.0
+        volumes:
+            - ./metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
+            #- /var/run/docker.sock:/var/run/docker.sock:ro
+            #- /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
+            #- /proc:/hostfs/proc:ro
+            #- /:/hostfs:ro
+        networks:
+            - monitor
+        depends_on:
+            - postgres
 
     redis:
         image: redis

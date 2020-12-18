@@ -40,6 +40,19 @@ services:
             restart_policy:
                 condition: on-failure
 
+    metricbeat:
+        image: metricbeat
+        ports:
+            - 5066:5066
+        networks:
+            - monitor
+        volumes:
+            - ./metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
+        deploy:
+            replicas: 1
+            restart_policy:
+                condition: on-failure
+
     redis:
         image: redis
         command: redis-server --requirepass alsosecret
