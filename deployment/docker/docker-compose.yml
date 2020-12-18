@@ -69,10 +69,6 @@ services:
         image: docker.elastic.co/beats/metricbeat:7.1.0
         volumes:
             - ./metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
-            #- /var/run/docker.sock:/var/run/docker.sock:ro
-            #- /sys/fs/cgroup:/hostfs/sys/fs/cgroup:ro
-            #- /proc:/hostfs/proc:ro
-            #- /:/hostfs:ro
         networks:
             - monitor
         depends_on:
