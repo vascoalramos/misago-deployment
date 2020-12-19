@@ -57,19 +57,70 @@ services:
             restart_policy:
                 condition: on-failure
 
-    redis:
-        image: redis
-        command: redis-server --requirepass alsosecret
-        ports:
-            - ${REDIS_PORT}:6379
-        networks:
-            - misago-redis-in
+    redis-master:
+        build: redis/redis
         environment:
+            - REDIS_REPLICATION_MODE=master
             - REDIS_PASSWORD=${REDIS_PASSWORD}
-        deploy:
-            replicas: 1
-            restart_policy:
-                condition: on-failure
+        ports:
+            - 8010:6379
+
+
+    redis-slave-1:
+        build: redis/redis
+        environment:
+            - REDIS_REPLICATION_MODE=slave
+            - REDIS_MASTER_HOST=${REDIS_MASTER_HOST}
+            - REDIS_MASTER_PASSWORD=${REDIS_PASSWORD}
+            - REDIS_PASSWORD=${REDIS_PASSWORD}
+        ports:
+            - 8011:6379
+        depends_on:
+            - redis-master
+
+    redis-slave-2:
+        build: redis/redis
+        environment:
+            - REDIS_REPLICATION_MODE=slave
+            - REDIS_MASTER_HOST=${REDIS_MASTER_HOST}
+            - REDIS_MASTER_PASSWORD=${REDIS_PASSWORD}
+            - REDIS_PASSWORD=${REDIS_PASSWORD}
+        ports:
+            - 8012:6379
+        depends_on:
+            - redis-master
+
+    redis-sentinel:
+        image: 'bitnami/redis-sentinel:latest'
+        environment:
+            - REDIS_MASTER_PASSWORD=${REDIS_PASSWORD}
+            - REDIS_MASTER_HOST=${REDIS_MASTER_HOST}
+            - MASTER=redis-master
+            - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=${REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS}
+            - REDIS_SENTINEL_FAILOVER_TIMEOUT=${REDIS_SENTINEL_FAILOVER_TIMEOUT}
+            - REDIS_SENTINEL_QUORUM=${REDIS_SENTINEL_QUORUM}
+        depends_on:
+            - redis-master
+            - redis-slave-1
+            - redis-slave-2
+        ports:
+            - ${SENTINEL_PORT}:26379
+    
+    proxy:
+        build: redis/haproxy
+        depends_on:
+            - redis-slave-1
+            - redis-slave-2
+            - redis-master
+            - redis-sentinel
+        ports:
+            - '9000:9000'
+            - ${REDIS_PORT}:6379
+        environment:
+            - ADMIN_USERNAME=${ADMIN_USERNAME}
+            - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+            - REDIS_PASSWORD=${REDIS_PASSWORD}
+            - REDIS_HOSTS=redis-master, redis-slave-1, redis-slave-2
 
     misago:
         image: vascoalramos/misago-app

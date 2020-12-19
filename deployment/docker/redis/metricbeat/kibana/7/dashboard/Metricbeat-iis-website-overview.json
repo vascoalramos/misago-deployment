@@ -1,0 +1,434 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "This dashboard shows metrics for the websites running on IIS.",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"e8bd7244-57bf-4e16-b096-4fa7cb8cbba8\", \"x\": 0, \"y\": 0, \"w\": 9, \"h\": 6}, \"embeddableConfig\": {\"title\": \"\"}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"e8bd7244-57bf-4e16-b096-4fa7cb8cbba8\", \"version\": \"7.6.0\"}, {\"gridData\": {\"i\": \"193cca9a-a5c3-40c4-a9af-1020b279b845\", \"x\": 9, \"y\": 0, \"w\": 13, \"h\": 12}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"193cca9a-a5c3-40c4-a9af-1020b279b845\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Current Connections\"}, \"title\": \"Current Connections\"}, {\"gridData\": {\"i\": \"7b5d1298-0480-443a-bf0e-5b594903c680\", \"x\": 22, \"y\": 0, \"w\": 13, \"h\": 12}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"7b5d1298-0480-443a-bf0e-5b594903c680\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Maximum Connections\"}, \"title\": \"Maximum Connections\"}, {\"gridData\": {\"i\": \"fd0c5fd7-4df8-44d9-905f-5634f49ae875\", \"x\": 35, \"y\": 0, \"w\": 13, \"h\": 12}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"fd0c5fd7-4df8-44d9-905f-5634f49ae875\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Total Connection Attempts\"}, \"title\": \"Total Connection Attempts\"}, {\"gridData\": {\"i\": \"69a127c6-8c4f-403a-aded-7a49dc3d3cd9\", \"x\": 0, \"y\": 6, \"w\": 9, \"h\": 6}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"69a127c6-8c4f-403a-aded-7a49dc3d3cd9\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Filters\"}, \"title\": \"Filters\"}, {\"gridData\": {\"i\": \"545b1abe-fd22-455b-8bc6-68bd48c2d384\", \"x\": 0, \"y\": 12, \"w\": 9, \"h\": 12}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"545b1abe-fd22-455b-8bc6-68bd48c2d384\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Service Uptime\"}, \"title\": \"Service Uptime\"}, {\"gridData\": {\"i\": \"c026e461-8b64-4952-be07-744773cb18b9\", \"x\": 9, \"y\": 12, \"w\": 20, \"h\": 12}, \"panelRefName\": \"panel_6\", \"panelIndex\": \"c026e461-8b64-4952-be07-744773cb18b9\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Bytes Sent/sec\"}, \"title\": \"Bytes Sent/sec\"}, {\"gridData\": {\"i\": \"98b6e727-3343-43df-84e1-12933856f432\", \"x\": 29, \"y\": 12, \"w\": 19, \"h\": 12}, \"panelRefName\": \"panel_7\", \"panelIndex\": \"98b6e727-3343-43df-84e1-12933856f432\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Bytes Received/sec\"}, \"title\": \"Bytes Received/sec\"}, {\"gridData\": {\"i\": \"d4b32bd4-dee2-44e2-930d-91e4607c0668\", \"x\": 0, \"y\": 24, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_8\", \"panelIndex\": \"d4b32bd4-dee2-44e2-930d-91e4607c0668\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"GET Requests/sec\"}, \"title\": \"GET Requests/sec\"}, {\"gridData\": {\"i\": \"d24b5bb0-6dc3-40ba-91cb-5ca5e48a3afa\", \"x\": 12, \"y\": 24, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_9\", \"panelIndex\": \"d24b5bb0-6dc3-40ba-91cb-5ca5e48a3afa\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"POST Requests/sec\"}, \"title\": \"POST Requests/sec\"}, {\"gridData\": {\"i\": \"c8cfac9e-ad2a-4ddf-94c9-0454e987b2b8\", \"x\": 24, \"y\": 24, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_10\", \"panelIndex\": \"c8cfac9e-ad2a-4ddf-94c9-0454e987b2b8\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"PUT Requests/sec\"}, \"title\": \"PUT Requests/sec\"}, {\"gridData\": {\"i\": \"41b4d631-4878-49af-b34b-f04f473599c8\", \"x\": 36, \"y\": 24, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_11\", \"panelIndex\": \"41b4d631-4878-49af-b34b-f04f473599c8\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"DELETE Requests/sec\"}, \"title\": \"DELETE Requests/sec\"}, {\"gridData\": {\"i\": \"90d9d209-6ef9-4ab7-b9a2-48a1f420e555\", \"x\": 36, \"y\": 36, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_12\", \"panelIndex\": \"90d9d209-6ef9-4ab7-b9a2-48a1f420e555\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Total DELETE Requests\"}, \"title\": \"Total DELETE Requests\"}, {\"gridData\": {\"i\": \"c7379d87-3da3-4be4-a8bd-8db04da66ba4\", \"x\": 0, \"y\": 36, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_13\", \"panelIndex\": \"c7379d87-3da3-4be4-a8bd-8db04da66ba4\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Total GET Requests\"}, \"title\": \"Total GET Requests\"}, {\"gridData\": {\"i\": \"9a22a36c-5fe8-4cc2-be23-4d9db2d7beda\", \"x\": 12, \"y\": 36, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_14\", \"panelIndex\": \"9a22a36c-5fe8-4cc2-be23-4d9db2d7beda\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Total POST Requests\"}, \"title\": \"Total POST Requests\"}, {\"gridData\": {\"i\": \"6cf940a0-eb04-447b-8f7e-d4561f8838ac\", \"x\": 24, \"y\": 36, \"w\": 12, \"h\": 12}, \"panelRefName\": \"panel_15\", \"panelIndex\": \"6cf940a0-eb04-447b-8f7e-d4561f8838ac\", \"version\": \"7.6.0\", \"embeddableConfig\": {\"title\": \"Total PUT Requests \"}, \"title\": \"Total PUT Requests \"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat IIS] Website Overview",
+                "version": 1
+            },
+            "id": "4b975820-85a1-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "references": [
+                {
+                    "id": "f9723710-8602-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "57d914d0-860e-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "6db58c20-860e-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "e3ee4990-860e-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b7230190-8603-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "4557d670-860e-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "c784f9b0-8614-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "96fe7d70-8614-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_7",
+                    "type": "visualization"
+                },
+                {
+                    "id": "4921d5c0-8619-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_8",
+                    "type": "visualization"
+                },
+                {
+                    "id": "7dabd8e0-8619-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_9",
+                    "type": "visualization"
+                },
+                {
+                    "id": "a9427270-8619-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_10",
+                    "type": "visualization"
+                },
+                {
+                    "id": "7453b910-8624-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_11",
+                    "type": "visualization"
+                },
+                {
+                    "id": "8ee988d0-861b-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_12",
+                    "type": "visualization"
+                },
+                {
+                    "id": "1b4f8790-861a-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_13",
+                    "type": "visualization"
+                },
+                {
+                    "id": "31ed84b0-861b-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_14",
+                    "type": "visualization"
+                },
+                {
+                    "id": "54038fe0-861b-11ea-91bc-ab084c7ec0e7",
+                    "name": "panel_15",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2020-04-24T12:15:15.363Z",
+            "version": "Wzk1OTcsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Navigation Website Overview [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"fontSize\": 10, \"openLinksInNewTab\": false, \"markdown\": \"### IIS\\n\\n[Webserver](#/dashboard/ebc23240-8572-11ea-91bc-ab084c7ec0e7)| [Webserver processes](#/dashboard/2c171500-858b-11ea-91bc-ab084c7ec0e7) | [**Websites**](#/dashboard/4b975820-85a1-11ea-91bc-ab084c7ec0e7) | [Application Pools](#/dashboard/b4108810-861c-11ea-91bc-ab084c7ec0e7) \\n\\n\\n\\n\"}, \"aggs\": [], \"type\": \"markdown\", \"title\": \"Navigation Website Overview [Metricbeat IIS]\"}"
+            },
+            "id": "f9723710-8602-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T12:15:06.609Z",
+            "version": "Wzk1ODIsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Current Connections [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"71978870-32e4-11ea-af9e-d70582a45bda\"}], \"drilldown_url\": \"\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"gradient\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": \"1.2\", \"label\": \"Current Connections\", \"metrics\": [{\"size\": 1, \"field\": \"iis.website.network.current_connections\", \"type\": \"top_hit\", \"order\": \"desc\", \"id\": \"61fb4192-32e4-11ea-b9f8-4d0b340ad993\", \"order_by\": \"@timestamp\", \"agg_with\": \"avg\"}], \"terms_order_by\": \"_count\", \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61fb4191-32e4-11ea-b9f8-4d0b340ad993\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": \"6\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"gauge_width\": \"10\", \"axis_min\": 0, \"gauge_style\": \"circle\", \"background_color\": null, \"axis_position\": \"left\", \"pivot_rows\": \"30\", \"gauge_color_rules\": [{\"id\": \"9c09ed50-32e4-11ea-af9e-d70582a45bda\"}], \"bar_color_rules\": [{\"id\": \"f11cfd90-32e5-11ea-af9e-d70582a45bda\"}], \"id\": \"61fb4190-32e4-11ea-b9f8-4d0b340ad993\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"pivot_type\": \"string\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"60m\", \"show_grid\": 1, \"pivot_label\": \"Resource Name\", \"time_range_mode\": \"entire_time_range\", \"pivot_id\": \"cloud.instance.name\", \"gauge_inner_color\": null, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Current Connections [Metricbeat IIS]\"}"
+            },
+            "id": "57d914d0-860e-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:09:05.853Z",
+            "version": "Wzg3NTksMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Maximum Connections [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"71978870-32e4-11ea-af9e-d70582a45bda\"}], \"drilldown_url\": \"\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"gradient\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": \"1.2\", \"label\": \"Maximum Connections\", \"metrics\": [{\"size\": 1, \"field\": \"iis.website.network.maximum_connections\", \"type\": \"top_hit\", \"order\": \"desc\", \"id\": \"61fb4192-32e4-11ea-b9f8-4d0b340ad993\", \"order_by\": \"@timestamp\", \"agg_with\": \"avg\"}], \"terms_order_by\": \"61fb4192-32e4-11ea-b9f8-4d0b340ad993\", \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(104,204,202,1)\", \"id\": \"61fb4191-32e4-11ea-b9f8-4d0b340ad993\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": \"6\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"gauge_width\": \"10\", \"axis_min\": 0, \"gauge_style\": \"circle\", \"background_color\": null, \"axis_position\": \"left\", \"pivot_rows\": \"30\", \"gauge_color_rules\": [{\"id\": \"9c09ed50-32e4-11ea-af9e-d70582a45bda\"}], \"bar_color_rules\": [{\"id\": \"f11cfd90-32e5-11ea-af9e-d70582a45bda\"}], \"id\": \"61fb4190-32e4-11ea-b9f8-4d0b340ad993\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"pivot_type\": \"string\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"60m\", \"show_grid\": 1, \"pivot_label\": \"Resource Name\", \"time_range_mode\": \"entire_time_range\", \"pivot_id\": \"cloud.instance.name\", \"gauge_inner_color\": null, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Maximum Connections [Metricbeat IIS]\"}"
+            },
+            "id": "6db58c20-860e-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:07:57.207Z",
+            "version": "Wzg3NDMsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Total Connection Attempts [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"71978870-32e4-11ea-af9e-d70582a45bda\"}], \"drilldown_url\": \"\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"gradient\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": \"1.2\", \"label\": \"Total Connection Attempts\", \"metrics\": [{\"size\": 1, \"field\": \"iis.website.network.total_connection_attempts\", \"type\": \"top_hit\", \"order\": \"desc\", \"id\": \"61fb4192-32e4-11ea-b9f8-4d0b340ad993\", \"order_by\": \"@timestamp\", \"agg_with\": \"avg\"}], \"terms_order_by\": \"_count\", \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(251,158,0,1)\", \"id\": \"61fb4191-32e4-11ea-b9f8-4d0b340ad993\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": \"6\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"gauge_width\": \"10\", \"axis_min\": 0, \"gauge_style\": \"circle\", \"background_color\": null, \"axis_position\": \"left\", \"pivot_rows\": \"30\", \"gauge_color_rules\": [{\"id\": \"9c09ed50-32e4-11ea-af9e-d70582a45bda\"}], \"bar_color_rules\": [{\"id\": \"f11cfd90-32e5-11ea-af9e-d70582a45bda\"}], \"id\": \"61fb4190-32e4-11ea-b9f8-4d0b340ad993\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"pivot_type\": \"string\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"60m\", \"show_grid\": 1, \"pivot_label\": \"Resource Name\", \"time_range_mode\": \"entire_time_range\", \"pivot_id\": \"cloud.instance.name\", \"gauge_inner_color\": null, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Total Connection Attempts [Metricbeat IIS]\"}"
+            },
+            "id": "e3ee4990-860e-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:08:45.818Z",
+            "version": "Wzg3NTMsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Filters [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"updateFiltersOnChange\": true, \"useTimeFilter\": false, \"controls\": [{\"label\": \"Website\", \"type\": \"list\", \"fieldName\": \"iis.website.name\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549397251041\", \"indexPatternRefName\": \"control_0_index_pattern\"}], \"pinFilters\": false}, \"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"Website Filters [Metricbeat IIS]\"}"
+            },
+            "id": "b7230190-8603-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_0_index_pattern",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-04-24T09:47:17.191Z",
+            "version": "Wzg2NDUsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Service Uptime [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"71978870-32e4-11ea-af9e-d70582a45bda\"}], \"drilldown_url\": \"\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"iis.website.name\", \"terms_size\": \"10\", \"split_mode\": \"terms\", \"split_color_mode\": \"gradient\", \"type\": \"timeseries\", \"formatter\": \"s,d,\", \"value_template\": \"{{value}} d\", \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": \"1.2\", \"label\": \"Service Uptime\", \"metrics\": [{\"size\": 1, \"field\": \"iis.website.network.service_uptime\", \"type\": \"top_hit\", \"order\": \"desc\", \"id\": \"61fb4192-32e4-11ea-b9f8-4d0b340ad993\", \"order_by\": \"@timestamp\", \"agg_with\": \"avg\"}], \"terms_order_by\": \"_count\", \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(211,49,21,1)\", \"id\": \"61fb4191-32e4-11ea-b9f8-4d0b340ad993\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": \"6\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"gauge_width\": \"10\", \"axis_min\": 0, \"gauge_style\": \"circle\", \"background_color\": null, \"axis_position\": \"left\", \"pivot_rows\": \"30\", \"gauge_color_rules\": [{\"id\": \"9c09ed50-32e4-11ea-af9e-d70582a45bda\"}], \"bar_color_rules\": [{\"id\": \"f11cfd90-32e5-11ea-af9e-d70582a45bda\"}], \"id\": \"61fb4190-32e4-11ea-b9f8-4d0b340ad993\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"pivot_type\": \"string\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"60m\", \"show_grid\": 1, \"pivot_label\": \"Resource Name\", \"time_range_mode\": \"entire_time_range\", \"pivot_id\": \"cloud.instance.name\", \"gauge_inner_color\": null, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Service Uptime [Metricbeat IIS]\"}"
+            },
+            "id": "4557d670-860e-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:06:35.877Z",
+            "version": "Wzg3MjksMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Bytes Sent/s [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}/s\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"bytes\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Bytes Sent\", \"metrics\": [{\"field\": \"iis.website.network.bytes_sent_per_sec\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(252,196,0,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Bytes Sent/s [Metricbeat IIS]\"}"
+            },
+            "id": "c784f9b0-8614-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:17:19.307Z",
+            "version": "Wzg3ODgsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Bytes Received/s [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}/s\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"bytes\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Bytes Received\", \"metrics\": [{\"field\": \"iis.website.network.bytes_received_per_sec\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(252,196,0,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Bytes Received/s [Metricbeat IIS]\"}"
+            },
+            "id": "96fe7d70-8614-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:18:51.070Z",
+            "version": "Wzg3OTksMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website GET Requests/s [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}/s\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"GET Requests \", \"metrics\": [{\"field\": \"iis.website.network.get_requests_per_sec\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(252,196,0,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website GET Requests/s [Metricbeat IIS]\"}"
+            },
+            "id": "4921d5c0-8619-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:49:34.748Z",
+            "version": "Wzg4MjQsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website POST Requests/s [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}/s\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"POST Requests \", \"metrics\": [{\"field\": \"iis.website.network.post_requests_per_sec\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(252,196,0,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website POST Requests/s [Metricbeat IIS]\"}"
+            },
+            "id": "7dabd8e0-8619-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:51:02.893Z",
+            "version": "Wzg4MjksMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website PUT Requests/s [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}/s\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"PUT Requests \", \"metrics\": [{\"field\": \"iis.website.network.put_requests_per_sec\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(211,49,21,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website PUT Requests/s [Metricbeat IIS]\"}"
+            },
+            "id": "a9427270-8619-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T10:52:16.023Z",
+            "version": "Wzg4MzUsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website DELETE Requests/s [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}/s\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"DELETE Requests \", \"metrics\": [{\"field\": \"iis.website.network.delete_requests_per_sec\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(25,77,51,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website DELETE Requests/s [Metricbeat IIS]\"}"
+            },
+            "id": "7453b910-8624-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T12:09:31.681Z",
+            "version": "Wzk1MjEsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Total DELETE Requests [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Total DELETE Requests \", \"metrics\": [{\"field\": \"iis.website.network.total_delete_requests\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(244,78,59,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Total DELETE Requests [Metricbeat IIS]\"}"
+            },
+            "id": "8ee988d0-861b-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T11:05:50.813Z",
+            "version": "Wzg4ODUsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Total GET Requests [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Total GET Requests \", \"metrics\": [{\"field\": \"iis.website.network.total_get_requests\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Total GET Requests [Metricbeat IIS]\"}"
+            },
+            "id": "1b4f8790-861a-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T11:02:23.731Z",
+            "version": "Wzg4NjQsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Total POST Requests [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Total POST Requests \", \"metrics\": [{\"field\": \"iis.website.network.total_post_requests\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Total POST Requests [Metricbeat IIS]\"}"
+            },
+            "id": "31ed84b0-861b-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T11:03:14.811Z",
+            "version": "Wzg4NjgsMTNd"
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Website Total PUT Requests [Metricbeat IIS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"iis.website.name\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Total PUT Requests \", \"metrics\": [{\"field\": \"iis.website.network.total_put_requests\", \"type\": \"avg\", \"id\": \"c9fd8ce1-32e8-11ea-84f4-e9593f8ba8f6\"}], \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"rgba(22,165,165,1)\", \"id\": \"c9fd8ce0-32e8-11ea-84f4-e9593f8ba8f6\", \"line_width\": \"2\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"show_grid\": 1, \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_min\": 0, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"c9fd65d0-32e8-11ea-84f4-e9593f8ba8f6\", \"isModelInvalid\": false, \"type\": \"timeseries\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Website Total PUT Requests [Metricbeat IIS]\"}"
+            },
+            "id": "54038fe0-861b-11ea-91bc-ab084c7ec0e7",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-04-24T11:04:11.998Z",
+            "version": "Wzg4NzQsMTNd"
+        }
+    ],
+    "version": "7.6.0"
+}
