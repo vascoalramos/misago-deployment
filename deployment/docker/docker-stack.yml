@@ -50,6 +50,8 @@ services:
             - 5066:5066
         networks:
             - monitor
+        environment:
+            - MONITOR_IP=${MONITOR_IP}
         volumes:
             - ./metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
         deploy:
@@ -116,6 +118,7 @@ services:
         environment:
             - APP_HOST=misago
             - APP_PORT_NUMBER=80
+            - MONITOR_IP=${MONITOR_IP}
         networks:
             - misago-nginx
             - misago-out
