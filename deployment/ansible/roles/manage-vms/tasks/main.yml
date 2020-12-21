@@ -1,14 +1,14 @@
 ---
 
 - name: Manage Monitoring VM
-  include: manage.yml name=project-vm-monitoring type=e2-medium group=monitoring
+  include: manage.yml name=project-vm-monitoring type=e2-medium group=monitor
 
 - name: Manage Swarm Manager VMs
-  include: manage.yml name=project-vm-manager1 type=e2-small group=manager
-- include: manage.yml name=project-vm-manager2 type=e2-small group=manager
-- include: manage.yml name=project-vm-manager3 type=e2-small group=manager
+  include: manage.yml name=project-vm-manager1 type=e2-small group=managers
+- include: manage.yml name=project-vm-manager2 type=e2-small group=managers
+- include: manage.yml name=project-vm-manager3 type=e2-small group=managers
 
 - name: Manage worker VMs
-  include: manage.yml name=project-vm-worker1 type=e2-micro group=worker
-- include: manage.yml name=project-vm-worker2 type=e2-micro group=worker
-- include: manage.yml name=project-vm-worker3 type=e2-micro group=worker
+  include: manage.yml name=project-vm-worker1 type=e2-micro group=workers
+- include: manage.yml name=project-vm-worker2 type=e2-micro group=workers
+- include: manage.yml name=project-vm-worker3 type=e2-micro group=workers

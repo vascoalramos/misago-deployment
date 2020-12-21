@@ -14,9 +14,6 @@
 
   register: instance
 
-- name: Wait for SSH to come up
-  wait_for: host={{ instance.networkInterfaces[0].accessConfigs[0].natIP }} port=22 delay=1 timeout=60
-
 - name: Add VM to inventory
   add_host:
     hostname: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
