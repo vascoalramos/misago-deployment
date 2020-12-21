@@ -54,6 +54,8 @@ services:
             - MONITOR_IP=${MONITOR_IP}
         volumes:
             - ./metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
+        depends_on:
+            - postgres
         deploy:
             replicas: 1
             restart_policy:
