@@ -22,7 +22,7 @@ setup.template.settings:
     index.codec: best_compression
 
 setup.kibana:
-    host: ${MONITOR_IP}:5601
+    host: "${MONITOR_IP}:5601"
 
 output.elasticsearch:
     hosts: ["${MONITOR_IP}:9200"]
