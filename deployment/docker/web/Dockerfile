@@ -11,10 +11,10 @@ ADD ./security.conf /etc/nginx/conf.d/
 ADD entrypoint.sh /
 
 # add metricbeat
-ADD metricbeat /metricbeat
+ADD --chown=root metricbeat /metricbeat
 
 # add filebeat
-ADD filebeat /filebeat
+ADD --chown=root filebeat /filebeat
 
 # healthcheck to make sure container is ready
 HEALTHCHECK CMD curl --fail http://localhost:80 || exit 1
