@@ -37,6 +37,7 @@ services:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
         networks:
             - misago-postgres-in
+            - monitor
         volumes:
             - /nfs/misago/pg:/var/lib/postgresql/data/:z
         deploy:
