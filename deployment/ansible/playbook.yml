@@ -1,0 +1,9 @@
+---
+
+- name: Create GCP Inventory
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - manage-vms
+  vars:
+    preemtible: true

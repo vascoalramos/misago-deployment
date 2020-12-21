@@ -1,0 +1,19 @@
+---
+
+- name: Update apt repositories
+  apt:
+    update_cache: yes
+- name: Upgrade system packages
+  apt:
+    name: "*"
+    state: latest
+- name: Disable SSH password authentication
+  copy:
+    src: templates/sshd_config
+    dest: /etc/ssh/sshd_config
+    owner: root
+    group: root
+    mode: '0644'
+    backup: yes
+    force: no
+  notify: "Restart ssh"

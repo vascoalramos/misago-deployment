@@ -1,0 +1,10 @@
+--- 
+
+# GCP Authentication Configuration
+gcp_project: marine-cycle-273002
+gcp_auth_kind: serviceaccount
+gcp_service_account_file: ./marine-cycle.json
+gcp_region: europe-west1
+gcp_zone: europe-west1-b
+
+# App configuration

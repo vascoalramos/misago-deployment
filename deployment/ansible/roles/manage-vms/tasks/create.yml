@@ -1,0 +1,54 @@
+---
+
+- name: Create VM disk
+  gcp_compute_disk:
+    name: 'disk-{{ name }}'
+    state: present
+
+    size_gb: 10
+    source_image: 'projects/ubuntu-os-cloud/global/images/family/ubuntu-minimal-2004-lts'
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ gcp_zone }}'
+
+  register: disk
+
+- name: Create VM address
+  gcp_compute_address:
+    name: 'address-{{ name }}'
+    state: present
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    region: '{{ gcp_region }}'
+    
+  register: address
+
+- name: Create VM instance
+  gcp_compute_instance:
+    name: '{{ name }}'
+    state: present
+    
+    machine_type: '{{ type }}'
+    disks:
+      - auto_delete: false
+        boot: true
+        source: '{{ disk }}'
+    network_interfaces:
+      - network: null
+        access_configs:
+          - name: 'External NAT'
+            nat_ip: '{{ address }}'
+            type: 'ONE_TO_ONE_NAT'
+    scheduling:
+      preemptible: '{{ preemptible | default("true") }}'
+    
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ gcp_zone }}'
+
+  register: instance

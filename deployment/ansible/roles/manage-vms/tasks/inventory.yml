@@ -1,0 +1,25 @@
+---
+
+-
+  gcp_compute_instance:
+    name: '{{ name }}'
+    state: present
+    status: running
+    deletion_protection: false
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ gcp_zone }}'
+
+  register: instance
+
+- name: Wait for SSH to come up
+  wait_for: host={{ instance.networkInterfaces[0].accessConfigs[0].natIP }} port=22 delay=1 timeout=60
+
+- name: Add VM to inventory
+  add_host:
+    hostname: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
+    ansible_host: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
+    internal_ip: '{{ instance.networkInterfaces[0].networkIP }}'
+    groupname: '{{ group }}'
