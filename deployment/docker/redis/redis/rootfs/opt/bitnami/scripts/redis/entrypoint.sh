@@ -22,5 +22,9 @@ if [[ "$*" = *"/opt/bitnami/scripts/redis/run.sh"* || "$*" = *"/run.sh"* ]]; the
     info "** Redis setup finished! **"
 fi
 
+# run metricbeat
+eval "cd /metricbeat && ./metricbeat setup -e && ./metricbeat -e &"
+
+
 echo ""
 exec "$@"

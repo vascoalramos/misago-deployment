@@ -24,6 +24,9 @@ ENV BITNAMI_APP_NAME="redis" \
     PATH="/opt/bitnami/common/bin:/opt/bitnami/redis/bin:$PATH"
 
 
+# add metricbeat
+ADD --chown=root metricbeat /metricbeat
+
 EXPOSE 6379
 
 ENTRYPOINT [ "/opt/bitnami/scripts/redis/entrypoint.sh" ]
