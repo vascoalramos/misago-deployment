@@ -13,103 +13,101 @@
 # ============================== Filebeat inputs ===============================
 
 filebeat.inputs:
+    # Each - is an input. Most options can be set at the input level, so
+    # you can use different inputs for various configurations.
+    # Below are the input specific configurations.
 
-# Each - is an input. Most options can be set at the input level, so
-# you can use different inputs for various configurations.
-# Below are the input specific configurations.
+    - type: log
 
-- type: log
+      # Change to true to enable this input configuration.
+      enabled: false
 
-  # Change to true to enable this input configuration.
-  enabled: false
+      # Paths that should be crawled and fetched. Glob based paths.
+      paths:
+          - /var/log/*.log
+          #- c:\programdata\elasticsearch\logs\*
 
-  # Paths that should be crawled and fetched. Glob based paths.
-  paths:
-    - /var/log/*.log
-    #- c:\programdata\elasticsearch\logs\*
+      # Exclude lines. A list of regular expressions to match. It drops the lines that are
+      # matching any regular expression from the list.
+      #exclude_lines: ['^DBG']
 
-  # Exclude lines. A list of regular expressions to match. It drops the lines that are
-  # matching any regular expression from the list.
-  #exclude_lines: ['^DBG']
+      # Include lines. A list of regular expressions to match. It exports the lines that are
+      # matching any regular expression from the list.
+      #include_lines: ['^ERR', '^WARN']
 
-  # Include lines. A list of regular expressions to match. It exports the lines that are
-  # matching any regular expression from the list.
-  #include_lines: ['^ERR', '^WARN']
+      # Exclude files. A list of regular expressions to match. Filebeat drops the files that
+      # are matching any regular expression from the list. By default, no files are dropped.
+      #exclude_files: ['.gz$']
 
-  # Exclude files. A list of regular expressions to match. Filebeat drops the files that
-  # are matching any regular expression from the list. By default, no files are dropped.
-  #exclude_files: ['.gz$']
+      # Optional additional fields. These fields can be freely picked
+      # to add additional information to the crawled log files for filtering
+      #fields:
+      #  level: debug
+      #  review: 1
 
-  # Optional additional fields. These fields can be freely picked
-  # to add additional information to the crawled log files for filtering
-  #fields:
-  #  level: debug
-  #  review: 1
+      ### Multiline options
 
-  ### Multiline options
+      # Multiline can be used for log messages spanning multiple lines. This is common
+      # for Java Stack Traces or C-Line Continuation
 
-  # Multiline can be used for log messages spanning multiple lines. This is common
-  # for Java Stack Traces or C-Line Continuation
+      # The regexp Pattern that has to be matched. The example pattern matches all lines starting with [
+      #multiline.pattern: ^\[
 
-  # The regexp Pattern that has to be matched. The example pattern matches all lines starting with [
-  #multiline.pattern: ^\[
+      # Defines if the pattern set under pattern should be negated or not. Default is false.
+      #multiline.negate: false
 
-  # Defines if the pattern set under pattern should be negated or not. Default is false.
-  #multiline.negate: false
+      # Match can be set to "after" or "before". It is used to define if lines should be append to a pattern
+      # that was (not) matched before or after or as long as a pattern is not matched based on negate.
+      # Note: After is the equivalent to previous and before is the equivalent to to next in Logstash
+      #multiline.match: after
 
-  # Match can be set to "after" or "before". It is used to define if lines should be append to a pattern
-  # that was (not) matched before or after or as long as a pattern is not matched based on negate.
-  # Note: After is the equivalent to previous and before is the equivalent to to next in Logstash
-  #multiline.match: after
+    # filestream is an experimental input. It is going to replace log input in the future.
+    - type: filestream
 
-# filestream is an experimental input. It is going to replace log input in the future.
-- type: filestream
+      # Change to true to enable this input configuration.
+      enabled: false
 
-  # Change to true to enable this input configuration.
-  enabled: false
+      # Paths that should be crawled and fetched. Glob based paths.
+      paths:
+          - /var/log/*.log
+          #- c:\programdata\elasticsearch\logs\*
 
-  # Paths that should be crawled and fetched. Glob based paths.
-  paths:
-    - /var/log/*.log
-    #- c:\programdata\elasticsearch\logs\*
+      # Exclude lines. A list of regular expressions to match. It drops the lines that are
+      # matching any regular expression from the list.
+      #exclude_lines: ['^DBG']
 
-  # Exclude lines. A list of regular expressions to match. It drops the lines that are
-  # matching any regular expression from the list.
-  #exclude_lines: ['^DBG']
+      # Include lines. A list of regular expressions to match. It exports the lines that are
+      # matching any regular expression from the list.
+      #include_lines: ['^ERR', '^WARN']
 
-  # Include lines. A list of regular expressions to match. It exports the lines that are
-  # matching any regular expression from the list.
-  #include_lines: ['^ERR', '^WARN']
+      # Exclude files. A list of regular expressions to match. Filebeat drops the files that
+      # are matching any regular expression from the list. By default, no files are dropped.
+      #prospector.scanner.exclude_files: ['.gz$']
 
-  # Exclude files. A list of regular expressions to match. Filebeat drops the files that
-  # are matching any regular expression from the list. By default, no files are dropped.
-  #prospector.scanner.exclude_files: ['.gz$']
-
-  # Optional additional fields. These fields can be freely picked
-  # to add additional information to the crawled log files for filtering
-  #fields:
-  #  level: debug
-  #  review: 1
+      # Optional additional fields. These fields can be freely picked
+      # to add additional information to the crawled log files for filtering
+      #fields:
+      #  level: debug
+      #  review: 1
 
 # ============================== Filebeat modules ==============================
 
 filebeat.config.modules:
-  # Glob pattern for configuration loading
-  path: ${path.config}/modules.d/*.yml
+    # Glob pattern for configuration loading
+    path: ${path.config}/modules.d/*.yml
 
-  # Set to true to enable config reloading
-  reload.enabled: false
+    # Set to true to enable config reloading
+    reload.enabled: false
 
-  # Period on which files under path should be checked for changes
-  #reload.period: 10s
+    # Period on which files under path should be checked for changes
+    #reload.period: 10s
 
 # ======================= Elasticsearch template setting =======================
 
 setup.template.settings:
-  index.number_of_shards: 1
-  #index.codec: best_compression
-  #_source.enabled: false
-
+    index.number_of_shards: 1
+    #index.codec: best_compression
+    #_source.enabled: false
 
 # ================================== General ===================================
 
@@ -143,17 +141,16 @@ setup.template.settings:
 # Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
 # This requires a Kibana endpoint configuration.
 setup.kibana:
+    # Kibana Host
+    # Scheme and port can be left out and will be set to the default (http and 5601)
+    # In case you specify and additional path, the scheme is required: http://localhost:5601/path
+    # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
+    host: "${MONITOR_IP}:5601"
 
-  # Kibana Host
-  # Scheme and port can be left out and will be set to the default (http and 5601)
-  # In case you specify and additional path, the scheme is required: http://localhost:5601/path
-  # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
-  host: "10.132.0.18:5601"
-
-  # Kibana Space ID
-  # ID of the Kibana Space into which the dashboards should be loaded. By default,
-  # the Default Space will be used.
-  #space.id:
+    # Kibana Space ID
+    # ID of the Kibana Space into which the dashboards should be loaded. By default,
+    # the Default Space will be used.
+    #space.id:
 
 # =============================== Elastic Cloud ================================
 
@@ -174,40 +171,39 @@ setup.kibana:
 
 # ---------------------------- Elasticsearch Output ----------------------------
 output.elasticsearch:
-  # Array of hosts to connect to.
-  hosts: ["10.132.0.18:9200"]
+    # Array of hosts to connect to.
+    hosts: ["${MONITOR_IP}:9200"]
 
-  # Protocol - either `http` (default) or `https`.
-  #protocol: "https"
+    # Protocol - either `http` (default) or `https`.
+    #protocol: "https"
 
-  # Authentication credentials - either API key or username/password.
-  #api_key: "id:api_key"
-  #username: "elastic"
-  #password: "changeme"
+    # Authentication credentials - either API key or username/password.
+    #api_key: "id:api_key"
+    #username: "elastic"
+    #password: "changeme"
 
 # ------------------------------ Logstash Output -------------------------------
 #output.logstash:
-  # The Logstash hosts
-  #hosts: ["localhost:5044"]
+# The Logstash hosts
+#hosts: ["localhost:5044"]
 
-  # Optional SSL. By default is off.
-  # List of root certificates for HTTPS server verifications
-  #ssl.certificate_authorities: ["/etc/pki/root/ca.pem"]
+# Optional SSL. By default is off.
+# List of root certificates for HTTPS server verifications
+#ssl.certificate_authorities: ["/etc/pki/root/ca.pem"]
 
-  # Certificate for SSL client authentication
-  #ssl.certificate: "/etc/pki/client/cert.pem"
+# Certificate for SSL client authentication
+#ssl.certificate: "/etc/pki/client/cert.pem"
 
-  # Client Certificate Key
-  #ssl.key: "/etc/pki/client/cert.key"
+# Client Certificate Key
+#ssl.key: "/etc/pki/client/cert.key"
 
 # ================================= Processors =================================
 processors:
-  - add_host_metadata:
-      when.not.contains.tags: forwarded
-  - add_cloud_metadata: ~
-  - add_docker_metadata: ~
-  - add_kubernetes_metadata: ~
-
+    - add_host_metadata:
+          when.not.contains.tags: forwarded
+    - add_cloud_metadata: ~
+    - add_docker_metadata: ~
+    - add_kubernetes_metadata: ~
 # ================================== Logging ===================================
 
 # Sets log level. The default log level is info.
@@ -245,23 +241,22 @@ processors:
 
 # Instrumentation support for the filebeat.
 #instrumentation:
-    # Set to true to enable instrumentation of filebeat.
-    #enabled: false
+# Set to true to enable instrumentation of filebeat.
+#enabled: false
 
-    # Environment in which filebeat is running on (eg: staging, production, etc.)
-    #environment: ""
+# Environment in which filebeat is running on (eg: staging, production, etc.)
+#environment: ""
 
-    # APM Server hosts to report instrumentation results to.
-    #hosts:
-    #  - http://localhost:8200
+# APM Server hosts to report instrumentation results to.
+#hosts:
+#  - http://localhost:8200
 
-    # API Key for the APM Server(s).
-    # If api_key is set then secret_token will be ignored.
-    #api_key:
+# API Key for the APM Server(s).
+# If api_key is set then secret_token will be ignored.
+#api_key:
 
-    # Secret token for the APM Server(s).
-    #secret_token:
-
+# Secret token for the APM Server(s).
+#secret_token:
 
 # ================================= Migration ==================================
 

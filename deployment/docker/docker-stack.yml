@@ -37,6 +37,7 @@ services:
             - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
         networks:
             - misago-postgres-in
+            - monitor
         volumes:
             - /nfs/misago/pg:/var/lib/postgresql/data/:z
         deploy:
@@ -45,13 +46,17 @@ services:
                 condition: on-failure
 
     metricbeat:
-        image: metricbeat
+        image: docker.elastic.co/beats/metricbeat:7.1.0
         ports:
             - 5066:5066
         networks:
             - monitor
+        environment:
+            - MONITOR_IP=${MONITOR_IP}
         volumes:
             - ./metricbeat/metricbeat.docker.yml:/usr/share/metricbeat/metricbeat.yml:ro
+        depends_on:
+            - postgres
         deploy:
             replicas: 1
             restart_policy:
@@ -139,7 +144,7 @@ services:
             - /nfs/misago/static_files/:/static:rw
             - /nfs/misago/media_files/:/media:rw
         deploy:
-            replicas: 2
+            replicas: 3
             restart_policy:
                 condition: on-failure
 
@@ -167,6 +172,7 @@ services:
         environment:
             - APP_HOST=misago
             - APP_PORT_NUMBER=80
+            - MONITOR_IP=${MONITOR_IP}
         networks:
             - misago-nginx
             - misago-out
@@ -176,6 +182,6 @@ services:
             - /nfs/misago/static_files/:/static:r
             - /nfs/misago/media_files/:/media:r
         deploy:
-            replicas: 2
+            replicas: 3
             restart_policy:
                 condition: on-failure

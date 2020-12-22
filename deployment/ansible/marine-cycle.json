@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "marine-cycle-273002",
+  "private_key_id": "4260fece1bdd84513ae1b35dea307a3fedf8102a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC07yEzPOePV3xU\nVqrH7pofXP38RCtDCbzC3yeW/10ksHMRhZarEQNFCUUktyAogNLmWXzCB7M8Y9jU\nrzAstOCf2JW7DwEVcv0HYIBh5nZwC6gD+rEkZaLdFv+eEgtFncdHteHysdWCMBOz\nUXNcoecp9yLCYcm3JQqzFizSlJy3ybgt3Nl2SU5kvwY4jHwkwIssgNfUiuSF7iA3\nNcXetJjpS3dRaHokmGy660aAU4FSWC39m5NI+bi0Syuqreu/UILCkyRjcE3N52P2\n7aq9dv01kZyjbeMFsW74LbkGxI5mpV6Rk5T1YUXjXrbxPq4MabMLco/Rx5VsxsG5\noT89poxhAgMBAAECggEAEdMJ9gJ+vGINu0BDeElC8SqH0emESokjyZ3SyF8VVbc1\nSslah7U4GX25jE2nEx5nyG4R6op4J4+djYxJpmnWRCEB1Sj7/hkzIJ4q35ok2lJn\npaa1e0Sw9+9bVL7p0dyihGfAX9iRlE74rd5tCzfe7kUsrTIVfV+ej3h0h3VBACDq\nYc5f1qQyt3ANm8zaTdNablR+qvYiKGm/tBb9dgsBwwPFnqMaril0FvNjIo9FH/A/\nqzdR94iwd8FjfMVNObePNG3nwOhWDfNWYKzhP4+67pOKtApQQIC7QafS5Ci6ODxA\njnqprLhgUsuS8LErBR4sUM9391lQtwvPmxTYmM6iLQKBgQDpuc5O2wh7ubr3VRHl\nZD3ANL5ZdWlprFjgBCXWuV/WVy7Pn286FaxjWN+XmtmOo3179GYkAX0jDyUpH6MB\nX5O7RlK6NLdZCKuQjnE63zOxOGfPIDo+H/Ab+hHU0cwjF+GA9WD1nfEIFqJPFY2F\nnKe22o7A/4HTnSZybEqRN3ATBQKBgQDGLV4qc3EQie+RADpMvEMQDaPxNsiJbg/P\nFwz6ZUfDGGPxcNE9O4PF4U7b/f6iaQNfpsY5jB4BeDqhBhwD8EQImn3O0MZM5Pqg\nMBTey61Vyl7qL+xKIe/YTjEfegdXxVgSRyqTtV7uih2Xk/9xAd2qHO8T6VQeSKlQ\nhpFJnFWKrQKBgQDijOUqUGuPqj9NYNtA9AJbHYTop8Nu180qDzsyQGtiEw3f2JXy\nwnFftxS8GjAJb/XBQewDuKG4awTFMNJLEX7cR1UHAvQ5zAqoyzl8LEAp5xfQkFeE\nQmb2Z1YDaPyrg4lk+/RpABhTk8TuTWDpgyiaOI2pC8GnAivzO36n9gmflQKBgH1G\nKISFPS/LQhlTH4dqaqo3NS9CBjp5zJyIYbfXVinJvUPeoSYn/QCVkJgYU2KvJ2bL\nsfqmzED5k3Y+um7y7s7Rej3GU9Q/2v5v5oGAFy5oIt+/M4sZMNh3dS4EoaemJCpJ\numxs9nmr7VDoSU1SdKEYcTkRAg+ytvUkW6tAnAJxAoGAU3bgebFevv225ozggm46\nroxA0kpVK6mt+imd6LAVHqI4nPFC6CA88F+PC7whP9mt8+0zEY5IQ+88BCuDQ16y\ncbhuDH+4Ra/1gJHvmXShjedmkP4jf7Bzm4pxwuyYHcHcD7dnUGldjnRq7Rj0MOtP\n5vT2j7ZShKA/IZAVpb3jbus=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ansible-account@marine-cycle-273002.iam.gserviceaccount.com",
+  "client_id": "101983203238746935714",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ansible-account%40marine-cycle-273002.iam.gserviceaccount.com"
+}

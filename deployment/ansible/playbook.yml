@@ -1,0 +1,27 @@
+---
+
+- name: Setup GCP Inventory
+  hosts: localhost
+  gather_facts: no
+  roles:
+    - manage-vms
+  vars:
+    preemtible: true
+
+- name: Update & Upgrade all VMs
+  hosts: all
+  become: yes
+  roles:
+    - common
+  tags:
+    - provision
+
+- name: Install Docker on all managers and workers
+  hosts:
+    - managers
+    - workers
+  become: yes
+  roles:
+    - install-docker
+  tags:
+    - provision

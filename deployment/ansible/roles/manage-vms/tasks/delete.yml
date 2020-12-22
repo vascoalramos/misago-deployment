@@ -1,0 +1,32 @@
+---
+
+- name: Delete VM instance
+  gcp_compute_instance:
+    name: '{{ name }}'
+    state: absent
+    
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ gcp_zone }}'
+  
+- name: Delete VM address
+  gcp_compute_address:
+    name: 'address-{{ name }}'
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    region: '{{ gcp_region }}'
+
+    state: absent
+    
+- name: Delete VM disk
+  gcp_compute_disk:
+    name: 'disk-{{ name }}'
+    state: absent
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ gcp_zone }}'

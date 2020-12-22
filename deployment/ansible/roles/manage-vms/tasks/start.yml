@@ -1,0 +1,13 @@
+---
+
+- name: Poweron VM
+  gcp_compute_instance:
+    name: '{{ name }}'
+    state: present
+    status: RUNNING # It is a requirement that this name be in CAPS LOCK otherwise it doesn't work
+    deletion_protection: false
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ gcp_zone }}'

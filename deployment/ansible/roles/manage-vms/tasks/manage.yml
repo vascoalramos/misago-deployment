@@ -1,0 +1,26 @@
+---
+
+- 
+  include: create.yml
+  tags:
+    - create-vms
+
+- 
+  include: delete.yml
+  tags:
+    - delete-vms
+
+-
+  include: inventory.yml
+  tags:
+    - inventory
+  
+-
+  include: start.yml
+  tags:
+    - start-vms
+
+- 
+  include: stop.yml
+  tags:
+    - stop-vms
