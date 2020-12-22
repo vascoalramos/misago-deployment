@@ -1,0 +1,277 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "Overview of AWS EC2 Metrics",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"darkTheme\": false, \"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"3\", \"x\": 24, \"y\": 16, \"w\": 24, \"h\": 15}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"3\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"DiskIO Write Bytes\"}, \"title\": \"DiskIO Write Bytes\"}, {\"gridData\": {\"i\": \"5\", \"x\": 6, \"y\": 11, \"w\": 18, \"h\": 5}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"5\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"Status Check\"}, \"title\": \"Status Check\"}, {\"gridData\": {\"i\": \"11\", \"x\": 0, \"y\": 31, \"w\": 24, \"h\": 15}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"11\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"Network In Bytes\"}, \"title\": \"Network In Bytes\"}, {\"gridData\": {\"i\": \"12\", \"x\": 24, \"y\": 31, \"w\": 24, \"h\": 15}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"12\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"Network Out Bytes\"}, \"title\": \"Network Out Bytes\"}, {\"gridData\": {\"i\": \"15\", \"x\": 0, \"y\": 16, \"w\": 24, \"h\": 15}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"15\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"DiskIO Read Bytes\"}, \"title\": \"DiskIO Read Bytes\"}, {\"gridData\": {\"i\": \"17\", \"x\": 24, \"y\": 0, \"w\": 24, \"h\": 16}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"17\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"CPU Utilization\"}, \"title\": \"CPU Utilization\"}, {\"gridData\": {\"i\": \"18\", \"x\": 0, \"y\": 0, \"w\": 6, \"h\": 16}, \"panelRefName\": \"panel_6\", \"panelIndex\": \"18\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"Filters\"}, \"title\": \"Filters\"}, {\"gridData\": {\"i\": \"19\", \"x\": 6, \"y\": 0, \"w\": 18, \"h\": 11}, \"panelRefName\": \"panel_7\", \"panelIndex\": \"19\", \"version\": \"7.9.1\", \"embeddableConfig\": {\"title\": \"Instance State\"}, \"title\": \"Instance State\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat AWS] EC2 Overview",
+                "version": 1
+            },
+            "id": "c5846400-f7fb-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [
+                {
+                    "id": "fed59380-f7f8-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "9e8c6030-f7f8-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "15818fd0-f7f9-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "233b3400-f7f9-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "f1db6ec0-f7f8-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "be8828d0-f7f6-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "deab0260-2981-11e9-86eb-a3a07a77f530",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "09db13f0-2bdd-11e9-9fe1-cde861544141",
+                    "name": "panel_7",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2020-09-15T16:57:30.054Z",
+            "version": "WzEyNjksMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 DiskIO Write Bytes [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \"5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"terms_size\": \"10\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": \"\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS EC2 DiskIO Write Bytes\", \"metrics\": [{\"field\": \"aws.ec2.diskio.write.bytes\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"3\", \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"annotations\": [], \"show_grid\": 1, \"axis_position\": \"left\", \"tooltip_mode\": \"show_all\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"EC2 DiskIO Write Bytes [Metricbeat AWS]\"}"
+            },
+            "id": "fed59380-f7f8-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:55:57.556Z",
+            "version": "WzEyNTQsMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 Status Check Failed [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"d13f6b50-f7f6-11e8-bff8-21537b07dd44\"}], \"gauge_style\": \"half\", \"interval\": \"auto\", \"type\": \"metric\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"split_mode\": \"everything\", \"split_color_mode\": \"gradient\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"EC2 Status Check Failed\", \"metrics\": [{\"field\": \"aws.ec2.status.check_failed\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"gauge_width\": 10, \"gauge_inner_width\": 10, \"axis_formatter\": \"number\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"index_pattern\": \"metricbeat-*\", \"gauge_color_rules\": [{\"id\": \"b0c5b590-f7f7-11e8-bff8-21537b07dd44\"}], \"bar_color_rules\": [{\"id\": \"ad6d62d0-f7f7-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS EC2 Status Check Failed\"}"
+            },
+            "id": "9e8c6030-f7f8-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:01:03.887Z",
+            "version": "WzEwMiwxXQ=="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 Network In Bytes [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \">=5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"terms_size\": \"10\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": \"\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS EC2 Network In Bytes\", \"metrics\": [{\"field\": \"aws.ec2.network.in.bytes\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"3\", \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"annotations\": [], \"show_grid\": 1, \"axis_position\": \"left\", \"tooltip_mode\": \"show_all\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"EC2 Network In Bytes [Metricbeat AWS]\"}"
+            },
+            "id": "15818fd0-f7f9-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:50:36.078Z",
+            "version": "WzExOTEsMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 Network Out Bytes [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \">=5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"terms_size\": \"10\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": \"\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS EC2 Network Out Bytes\", \"metrics\": [{\"field\": \"aws.ec2.network.out.bytes\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"3\", \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"annotations\": [], \"show_grid\": 1, \"axis_position\": \"left\", \"tooltip_mode\": \"show_all\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"EC2 Network Out Bytes [Metricbeat AWS]\"}"
+            },
+            "id": "233b3400-f7f9-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:50:59.719Z",
+            "version": "WzExOTMsMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 DiskIO Read Bytes [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \">=5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"terms_size\": \"10\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": {\"query\": \"\", \"language\": \"kuery\"}, \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS EC2 DiskIO Read Bytes\", \"metrics\": [{\"field\": \"aws.ec2.diskio.read.bytes\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"3\", \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"annotations\": [], \"show_grid\": 1, \"axis_position\": \"left\", \"tooltip_mode\": \"show_all\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"EC2 DiskIO Read Bytes [Metricbeat AWS]\"}"
+            },
+            "id": "f1db6ec0-f7f8-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:55:49.460Z",
+            "version": "WzEyNTMsMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 CPU Utilization [Metricbeat AWS] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \">=5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"terms_size\": \"10\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": \"\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS EC2 CPU Utilization ECS\", \"metrics\": [{\"field\": \"aws.ec2.cpu.total.pct\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": \"3\", \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": \"2\"}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"annotations\": [], \"show_grid\": 1, \"axis_position\": \"left\", \"tooltip_mode\": \"show_all\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"EC2 CPU Utilization [Metricbeat AWS] ECS\"}"
+            },
+            "id": "be8828d0-f7f6-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:57:23.961Z",
+            "version": "WzEyNjgsMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "AWS Account Filter [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"updateFiltersOnChange\": true, \"useTimeFilter\": false, \"controls\": [{\"label\": \"account name\", \"type\": \"list\", \"fieldName\": \"cloud.account.name\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549397251041\", \"indexPatternRefName\": \"control_0_index_pattern\"}, {\"label\": \"region\", \"type\": \"list\", \"fieldName\": \"cloud.region\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1600187617334\", \"indexPatternRefName\": \"control_1_index_pattern\"}, {\"label\": \"instance name\", \"type\": \"list\", \"fieldName\": \"cloud.instance.name\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1600187931107\", \"indexPatternRefName\": \"control_2_index_pattern\"}], \"pinFilters\": false}, \"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"AWS Account Filter [Metricbeat AWS]\"}"
+            },
+            "id": "deab0260-2981-11e9-86eb-a3a07a77f530",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_0_index_pattern",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_1_index_pattern",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_2_index_pattern",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:39:11.261Z",
+            "version": "WzEwNjYsMV0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "EC2 Instance State [Metricbeat AWS] ECS",
+                "uiStateJSON": "{\"vis\": {\"legendOpen\": true, \"colors\": {\"16\": \"#629E51\", \"272\": \"#DEDAF7\", \"80\": \"#E24D42\", \"stopped\": \"#E24D42\", \"running\": \"#7EB26D\"}}}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"type\": \"pie\", \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": false, \"labels\": {\"truncate\": 100, \"show\": true, \"last_level\": true, \"values\": true}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"customLabel\": \"EC2 Instance State\"}, \"id\": \"1\", \"type\": \"count\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"size\": 5, \"field\": \"aws.ec2.instance.state.name\", \"otherBucket\": false, \"customLabel\": \"\", \"orderBy\": \"1\", \"order\": \"desc\", \"missingBucketLabel\": \"Missing\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\"}, \"id\": \"2\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"EC2 Instance State [Metricbeat AWS] ECS\"}"
+            },
+            "id": "09db13f0-2bdd-11e9-9fe1-cde861544141",
+            "migrationVersion": {
+                "visualization": "7.8.0"
+            },
+            "namespaces": [
+                "default"
+            ],
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-09-15T16:01:08.017Z",
+            "version": "WzE0MywxXQ=="
+        }
+    ],
+    "version": "7.9.1"
+}
