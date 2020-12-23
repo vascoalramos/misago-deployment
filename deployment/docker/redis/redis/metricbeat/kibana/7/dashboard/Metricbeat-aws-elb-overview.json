@@ -1,0 +1,259 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "Overview of AWS ELB Metrics",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"2\", \"x\": 23, \"y\": 32, \"w\": 25, \"h\": 9}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"2\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"HTTP 5XX Errors\"}, {\"gridData\": {\"i\": \"3\", \"x\": 11, \"y\": 0, \"w\": 37, \"h\": 11}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"3\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"Request Count\"}, {\"gridData\": {\"i\": \"4\", \"x\": 0, \"y\": 15, \"w\": 11, \"h\": 8}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"4\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"Unhealthy Host Count\"}, {\"gridData\": {\"i\": \"5\", \"x\": 0, \"y\": 7, \"w\": 11, \"h\": 8}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"5\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"Healthy Host Count\"}, {\"gridData\": {\"i\": \"6\", \"x\": 11, \"y\": 11, \"w\": 37, \"h\": 12}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"6\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"Latency in Seconds\"}, {\"gridData\": {\"i\": \"7\", \"x\": 0, \"y\": 32, \"w\": 23, \"h\": 9}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"7\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"HTTP Backend 4XX Errors\"}, {\"gridData\": {\"i\": \"8\", \"x\": 0, \"y\": 23, \"w\": 23, \"h\": 9}, \"panelRefName\": \"panel_6\", \"panelIndex\": \"8\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"Backend Connection Errors\"}, {\"gridData\": {\"i\": \"9\", \"x\": 0, \"y\": 0, \"w\": 11, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_7\", \"panelIndex\": \"9\", \"version\": \"7.3.0\"}, {\"gridData\": {\"i\": \"10\", \"x\": 23, \"y\": 23, \"w\": 25, \"h\": 9}, \"panelRefName\": \"panel_8\", \"panelIndex\": \"10\", \"version\": \"7.3.0\", \"embeddableConfig\": {}, \"title\": \"HTTP Backend 2XX\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat AWS] ELB Overview",
+                "version": 1
+            },
+            "id": "e74bf320-b3ce-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "dashboard": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "b9703dd0-b3c9-11e9-87a4-078dbbae220d",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "d560de70-b3c7-11e9-87a4-078dbbae220d",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "6fc1efd0-b3c9-11e9-87a4-078dbbae220d",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "6392bc30-b3c9-11e9-87a4-078dbbae220d",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b2ea15a0-b3c7-11e9-87a4-078dbbae220d",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "21f30090-b3ca-11e9-87a4-078dbbae220d",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "572d40e0-b3ca-11e9-87a4-078dbbae220d",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b5308940-7347-11e9-816b-07687310a99a",
+                    "name": "panel_7",
+                    "type": "visualization"
+                },
+                {
+                    "id": "1f528f50-b3ce-11e9-87a4-078dbbae220d",
+                    "name": "panel_8",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2019-09-12T02:24:38.326Z",
+            "version": "WzI0MTYsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB HTTP 5XX Errors [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0, \"label\": \"HTTP 5XX Errors\", \"metrics\": [{\"field\": \"aws.elb.metrics.HTTPCode_ELB_5XX.sum\", \"type\": \"avg\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": \"\", \"gauge_width\": 10, \"axis_min\": \"0\", \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"5m\", \"show_grid\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB HTTP 5XX Errors [Metricbeat AWS]\"}"
+            },
+            "id": "b9703dd0-b3c9-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T02:24:22.066Z",
+            "version": "WzI0MTUsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB Request Count [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"type\": \"timeseries\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0, \"label\": \"Request Count\", \"metrics\": [{\"field\": \"aws.elb.metrics.RequestCount.sum\", \"type\": \"avg\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": \"\", \"gauge_width\": 10, \"axis_min\": \"0\", \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"5m\", \"show_grid\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB Request Count [Metricbeat AWS]\"}"
+            },
+            "id": "d560de70-b3c7-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T02:22:46.781Z",
+            "version": "WzI0MDgsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB Unhealthy Host Count [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"value\": 0, \"operator\": \"gt\", \"background_color\": \"rgba(244,78,59,1)\", \"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\", \"color\": \"rgba(255,255,255,1)\"}], \"gauge_style\": \"half\", \"interval\": \"5m\", \"type\": \"metric\", \"series\": [{\"terms_field\": \"aws.dimensions.AvailabilityZone\", \"value_template\": \"{{value}}\", \"split_mode\": \"everything\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0, \"label\": \"Unhealthy Host Count\", \"metrics\": [{\"field\": \"aws.elb.metrics.UnHealthyHostCount.max\", \"type\": \"max\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"default_timefield\": \"@timestamp\", \"gauge_width\": 10, \"gauge_inner_width\": 10, \"filter\": \"\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"index_pattern\": \"metricbeat-*\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"show_legend\": 1, \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB Unhealthy Host Count [Metricbeat AWS]\"}"
+            },
+            "id": "6fc1efd0-b3c9-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T01:00:47.505Z",
+            "version": "WzIzOTYsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB Healthy Host Count [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"value\": 0, \"operator\": \"gt\", \"background_color\": \"rgba(104,188,0,1)\", \"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\", \"color\": \"rgba(255,255,255,1)\"}], \"gauge_style\": \"half\", \"interval\": \"5m\", \"type\": \"metric\", \"series\": [{\"terms_field\": \"aws.dimensions.AvailabilityZone\", \"value_template\": \"{{value}}\", \"split_mode\": \"everything\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0, \"label\": \"Healthy Host Count\", \"metrics\": [{\"field\": \"aws.elb.metrics.HealthyHostCount.max\", \"type\": \"max\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": 0, \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"default_timefield\": \"@timestamp\", \"gauge_width\": 10, \"gauge_inner_width\": 10, \"filter\": \"\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"index_pattern\": \"metricbeat-*\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"show_legend\": 1, \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB Healthy Host Count [Metricbeat AWS]\"}"
+            },
+            "id": "6392bc30-b3c9-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T01:00:18.978Z",
+            "version": "WzIzOTMsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB Latency in Seconds [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"s,s,3\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0, \"label\": \"Latency in seconds\", \"metrics\": [{\"field\": \"aws.elb.metrics.Latency.avg\", \"type\": \"avg\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": \"\", \"gauge_width\": 10, \"axis_min\": \"0\", \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"5m\", \"show_grid\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB Latency in Seconds [Metricbeat AWS]\"}"
+            },
+            "id": "b2ea15a0-b3c7-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T02:23:16.083Z",
+            "version": "WzI0MTAsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB HTTP Backend 4XX Errors [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"HTTP Backend 4XX Errors\", \"metrics\": [{\"field\": \"aws.elb.metrics.HTTPCode_Backend_4XX.sum\", \"type\": \"avg\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": \"\", \"gauge_width\": 10, \"axis_min\": \"0\", \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"5m\", \"show_grid\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB HTTP Backend 4XX Errors [Metricbeat AWS]\"}"
+            },
+            "id": "21f30090-b3ca-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T02:24:09.023Z",
+            "version": "WzI0MTQsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB Backend Connection Errors [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"steps\": 0, \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"00\", \"label\": \"Backend Connection Errors\", \"metrics\": [{\"field\": \"aws.elb.metrics.BackendConnectionErrors.sum\", \"type\": \"avg\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": \"\", \"gauge_width\": 10, \"axis_min\": \"0\", \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"5m\", \"show_grid\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB Backend Connection Errors [Metricbeat AWS]\"}"
+            },
+            "id": "572d40e0-b3ca-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T02:22:28.366Z",
+            "version": "WzI0MDcsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Region Filter [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"updateFiltersOnChange\": true, \"useTimeFilter\": false, \"controls\": [{\"label\": \"region\", \"type\": \"list\", \"fieldName\": \"cloud.region\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549397251041\", \"indexPatternRefName\": \"control_0_index_pattern\"}], \"pinFilters\": false}, \"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"AWS Region Filter\"}"
+            },
+            "id": "b5308940-7347-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_0_index_pattern",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-09-12T00:55:22.007Z",
+            "version": "WzIwNjgsN10="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "ELB HTTP Backend 2XX [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"7e66beb0-b3c6-11e9-af6e-ef22c5680226\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"value_template\": \"{{value}}\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0, \"label\": \"HTTP Backend 2XX\", \"metrics\": [{\"field\": \"aws.elb.metrics.HTTPCode_Backend_2XX.sum\", \"type\": \"avg\", \"id\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\"}], \"terms_order_by\": \"35d3cbc2-b3c6-11e9-bf3f-29d51aa3d971\", \"axis_position\": \"right\", \"point_size\": \"5\", \"stacked\": \"none\", \"color\": \"#3185FC\", \"id\": \"35d3cbc1-b3c6-11e9-bf3f-29d51aa3d971\", \"line_width\": 2}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"filter\": \"\", \"gauge_width\": 10, \"axis_min\": \"0\", \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"7d0b9b80-b3c6-11e9-af6e-ef22c5680226\"}], \"bar_color_rules\": [{\"id\": \"7db91990-b3c6-11e9-af6e-ef22c5680226\"}], \"id\": \"35d3cbc0-b3c6-11e9-bf3f-29d51aa3d971\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"@timestamp\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"5m\", \"show_grid\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"ELB HTTP Backend 2XX [Metricbeat AWS]\"}"
+            },
+            "id": "1f528f50-b3ce-11e9-87a4-078dbbae220d",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-09-12T02:23:38.069Z",
+            "version": "WzI0MTIsN10="
+        }
+    ],
+    "version": "7.3.0"
+}

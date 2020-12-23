@@ -1,0 +1,47 @@
+Test REDIS failover and replication mechanisms:
+
+We have to launch a cluster with 1 master, 2 slaves and sentinels
+
+Initially, we can see where the master is (docker exec -it "name_or_id_do_sentinel" bash):
+ redis-cli -p 26379 
+ SENTINEL master mymaster
+ SENTINEL sentinels mymaster
+
+
+So, let's create a record, through the master (docker exec -it "name_or_id_do_master" bash):
+ redis-cli (-p external) -a str0ng_passw0rd
+ SET mykey "Hello"
+ GET mykey
+
+
+If we go to a slave, we should be able to observe the created message:
+ redis-cli (-p external) -a str0ng_passw0rd
+ GET mykey
+
+However, on the slave, we cannot write data:
+ SET mykey2 "Hello" -> (error) READONLY You can't write against a read only replica.
+
+To test failover:
+ In Sentinel, we can see where the master is.
+  redis-cli -p 26379 
+  SENTINEL get-master-addr-by-name mymaster
+
+ So, let's 'turn off' the master (go to master redis):
+  redis-cli (-p external) -a str0ng_passw0rd DEBUG sleep 180 
+
+
+If we go to the sentinel (a few seconds later) we will get a different master.
+Then we can try to write in that master and everything is ok! Enter into the sentinel instance and then:
+ redis-cli -p 26379 
+ SENTINEL get-master-addr-by-name mymaster -> this command give us the ip and port of the new master instance
+
+When the timeout is over we can go to the old master (now slave) and see that the new record that we wrote in the new master is there.
+
+Notes: 
+Check ip container: 
+ docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
+
+It may be necessary configure the following environment variables
+REDIS_SENTINEL_FAILOVER_TIMEOUT
+REDIS_SENTINEL_QUORUM
+REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS

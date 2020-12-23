@@ -1,0 +1,2 @@
+2020-12-22T16:29:06.889Z	INFO	instance/beat.go:645	Home path: [/home/vr/Projects/misago-deployment/deployment/docker/redis/redis/metricbeat] Config path: [/home/vr/Projects/misago-deployment/deployment/docker/redis/redis/metricbeat] Data path: [/home/vr/Projects/misago-deployment/deployment/docker/redis/redis/metricbeat/data] Logs path: [/home/vr/Projects/misago-deployment/deployment/docker/redis/redis/metricbeat/logs]
+2020-12-22T16:29:06.890Z	INFO	instance/beat.go:653	Beat ID: ce531fd8-54f4-4a46-a3d3-237c30df150f
