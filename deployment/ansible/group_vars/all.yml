@@ -8,3 +8,26 @@ gcp_region: europe-west1
 gcp_zone: europe-west1-b
 
 # App configuration
+monitoring_vm: vm-monitoring
+
+env_vars:
+    # Misago: gunicorn
+    MISAGO_PORT: 8000
+    DJANGO_WSGI_MODULE: devproject.wsgi
+    DJANGO_SETTINGS_MODULE: devproject.settings
+
+    # PostgreSQL
+    POSTGRES_DB: misago
+    POSTGRES_USER: misago
+    POSTGRES_PASSWORD: secret
+    POSTGRES_HOST: postgres
+    POSTGRES_PORT: 5432
+
+    # REDIS
+    REDIS_HOST: redis
+    REDIS_PORT: 6379
+    REDIS_PASSWORD: alsosecret
+
+    # Monitoring
+    # MONITOR_IP: '{{ monitoring_vm }}'
+    MONITOR_IP: vr-vm3

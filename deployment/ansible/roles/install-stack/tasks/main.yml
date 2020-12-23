@@ -1,0 +1,43 @@
+---
+
+- name: Create Docker Swarm
+  become: yes
+  community.general.docker_swarm:
+    state: present
+  register: swarm_info
+  when: groups['managers'][0] == inventory_hostname
+
+- name: Join Docker Swarm
+  become: yes
+  community.general.docker_swarm:
+    state: join
+    remote_addrs:
+      - '{{ hostvars[groups["managers"][0]]["internal_ip"] }}'
+    join_token: '{{ hostvars[groups["managers"][0]]["swarm_info"].swarm_facts.JoinTokens.Manager }}'
+    advertise_addr: '{{ internal_ip }}'
+  when: groups['managers'][0] != inventory_hostname
+
+- name: Make sure the destination folder exists
+  become: yes
+  file:
+    path: '/opt/misago/metricbeat'
+    state: directory
+    recurse: yes
+
+- name: Copy Docker Stack file
+  become: yes
+  copy:
+    src: ../../../docker/docker-stack.yml
+    dest: /opt/misago/docker-stack.yml
+    owner: root
+    group: root
+    mode: '0644'
+
+- name: Copy Docker Stack Metricbeat file
+  become: yes
+  copy:
+    src: ../../../docker/metricbeat/metricbeat.docker.yml
+    dest: /opt/misago/metricbeat/metricbeat.docker.yml
+    owner: root
+    group: root
+    mode: '0644'

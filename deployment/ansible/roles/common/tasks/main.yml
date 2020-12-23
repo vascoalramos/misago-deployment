@@ -1,13 +1,18 @@
 ---
 
 - name: Update apt repositories
+  become: yes
   apt:
     update_cache: yes
+
 - name: Upgrade system packages
+  become: yes
   apt:
     name: "*"
     state: latest
+
 - name: Disable SSH password authentication
+  become: yes
   copy:
     src: templates/sshd_config
     dest: /etc/ssh/sshd_config
@@ -17,3 +22,57 @@
     backup: yes
     force: no
   notify: "Restart ssh"
+
+- name: Install required system packages
+  become: yes
+  apt:
+    pkg:
+      - apt-transport-https
+      - ca-certificates
+      - curl
+      - gnupg-agent
+      - software-properties-common
+      - nfs-common
+      - python3-pip
+      - nano
+    state: latest
+
+- name: Install required Python packages
+  become: yes
+  pip:
+    name:
+      - jsondiff
+      - pyyaml
+      - docker
+
+- name: Mount NFS Disk
+  become: yes
+  ansible.posix.mount:
+    src: '{{ hostvars["localhost"].nfs_disk.networks[0].ipAddresses[0] }}:/share_nfs'
+    path: /nfs
+    fstype: nfs
+    opts: rw
+    state: mounted
+
+# - name: Create NFS directories
+#   become: yes
+#   run_once: true
+#   command: 'mkdir -p /nfs/misago/{pg,static_files,media_files}' # Easier than using the file: module
+
+- name: Create NFS directories
+  become: yes
+  run_once: true
+  file:
+    path: '{{ item }}'
+    state: directory
+    owner: root
+    group: root
+    mode: '0777'
+  loop:
+    - /nfs/misago/pg
+    - /nfs/misago/static_files
+    - /nfs/misago/media_files
+
+# - name: Set NFS directories to be world-writable
+#   become: yes
+#   shell: 'chmod -R ugo=rwx /nfs' # Grant rwx for owner and group, rw for others

@@ -1,0 +1,9 @@
+Using this playbook requires:
+  - ansible-galaxy collection install google.cloud
+  - ansible-galaxy collection install ansible.posix
+
+To run a full provisioning (creates all VMs, installs docker, monitoring tools & deploys a stack):
+  - ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "provision"
+
+To delete the VMs after testing that this does indeed work:
+  - ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "delete-vms"

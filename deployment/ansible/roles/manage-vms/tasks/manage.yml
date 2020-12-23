@@ -3,7 +3,7 @@
 - 
   include: create.yml
   tags:
-    - create-vms
+    - provision
 
 - 
   include: delete.yml
@@ -14,6 +14,7 @@
   include: inventory.yml
   tags:
     - inventory
+    - provision # When provisioning, we're always going to need the inventory
   
 -
   include: start.yml
