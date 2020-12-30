@@ -24,10 +24,17 @@ env_vars:
     POSTGRES_PORT: 5432
 
     # REDIS
-    REDIS_HOST: redis
+    REDIS_MASTER_HOST: redis-master
     REDIS_PORT: 6379
-    REDIS_PASSWORD: alsosecret
+    REDIS_PASSWORD: str0ng_passw0rd
+    ADMIN_USERNAME: admin
+    ADMIN_PASSWORD: password
+    REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS: 5000
+    REDIS_SENTINEL_FAILOVER_TIMEOUT: 10000
+    REDIS_SENTINEL_QUORUM: 1
+
+    # REDIS SENTINEL
+    SENTINEL_PORT: 26379
 
     # Monitoring
     MONITOR_IP: '{{ monitoring_vm }}'
-    # MONITOR_IP: vr-vm3
