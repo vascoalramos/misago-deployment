@@ -29,5 +29,5 @@ env_vars:
     REDIS_PASSWORD: alsosecret
 
     # Monitoring
-    # MONITOR_IP: '{{ monitoring_vm }}'
-    MONITOR_IP: vr-vm3
+    MONITOR_IP: '{{ monitoring_vm }}'
+    # MONITOR_IP: vr-vm3

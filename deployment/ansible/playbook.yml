@@ -14,6 +14,13 @@
     - common
   tags:
     - provision
+  
+- name: Install Monitoring tools on Monitoring VM
+  hosts: monitor
+  roles:
+    - install-monitoring-tools
+  tags:
+    - provision
 
 - name: Install Docker on all managers and workers
   hosts:
