@@ -127,7 +127,7 @@ services:
         environment:
             - REDIS_MASTER_PASSWORD=${REDIS_PASSWORD}
             - REDIS_MASTER_HOST=${REDIS_MASTER_HOST}
-            - MASTER=redis-master
+            - MASTER=${REDIS_MASTER_HOST}
             - REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS=${REDIS_SENTINEL_DOWN_AFTER_MILLISECONDS}
             - REDIS_SENTINEL_FAILOVER_TIMEOUT=${REDIS_SENTINEL_FAILOVER_TIMEOUT}
             - REDIS_SENTINEL_QUORUM=${REDIS_SENTINEL_QUORUM}
@@ -161,7 +161,7 @@ services:
             - ADMIN_USERNAME=${ADMIN_USERNAME}
             - ADMIN_PASSWORD=${ADMIN_PASSWORD}
             - REDIS_PASSWORD=${REDIS_PASSWORD}
-            - REDIS_HOSTS=redis-master, redis-slave-1, redis-slave-2
+            - REDIS_HOSTS=${REDIS_MASTER_HOST}, redis-slave-1, redis-slave-2
         deploy:
             replicas: 1
             restart_policy:
