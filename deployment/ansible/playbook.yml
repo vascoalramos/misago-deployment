@@ -9,7 +9,10 @@
     preemtible: true
 
 - name: Update & Upgrade all VMs
-  hosts: all
+  hosts:
+    - monitor
+    - managers
+    - workers
   roles:
     - common
   tags:
@@ -67,5 +70,4 @@
         compose:
           - /opt/misago/docker-stack.yml
   tags:
-    - start-stack
     - provision

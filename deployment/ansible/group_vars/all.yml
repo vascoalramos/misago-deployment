@@ -37,4 +37,4 @@ env_vars:
     SENTINEL_PORT: 26379
 
     # Monitoring
-    MONITOR_IP: '{{ monitoring_vm }}'
+    MONITOR_IP: '{{ hostvars[groups["monitor"][0]]["internal_ip"] }}'

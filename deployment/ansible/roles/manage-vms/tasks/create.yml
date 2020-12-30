@@ -45,6 +45,8 @@
             type: 'ONE_TO_ONE_NAT'
     scheduling:
       preemptible: '{{ preemptible | default("true") }}'
+    labels:
+      type: '{{ group }}'
     
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
@@ -61,3 +63,10 @@
     sleep: 1
     state: started
   when: instance.changed
+
+- name: Add host to inventory
+  add_host:
+    hostname: '{{ name }}'
+    ansible_host: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
+    internal_ip: '{{ instance.networkInterfaces[0].networkIP }}'
+    groupname: '{{ group }}'

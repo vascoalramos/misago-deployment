@@ -1,5 +1,13 @@
 plugin: gcp_compute
 projects:
-    - marine-cycle-273002
+  - marine-cycle-273002
 auth_kind: serviceaccount
 service_account_file: ./marine-cycle.json
+keyed_groups:
+  - key: labels['type']
+    separator: ""
+hostnames:
+  - name
+compose:
+  ansible_host: networkInterfaces[0].accessConfigs[0].natIP
+  internal_ip: networkInterfaces[0].networkIP

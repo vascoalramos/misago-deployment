@@ -20,4 +20,5 @@
 
   register: nfs_disk
   tags:
+    - create-vms
     - provision

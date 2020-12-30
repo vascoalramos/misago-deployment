@@ -16,5 +16,5 @@
 - include: manage.yml name=project-vm-worker2 type=e2-medium group=workers
 - include: manage.yml name=project-vm-worker3 type=e2-medium group=workers
 
-- name: Delete NFS Storage Disk
-  include: delete-nfs.yml
+# - name: Delete NFS Storage Disk
+  # include: delete-nfs.yml
