@@ -1,0 +1,222 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "This dashboard gives an overview of resource costs and forecast",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"3202a4c8-ed88-4592-9d39-73846426413b\", \"x\": 0, \"y\": 0, \"w\": 48, \"h\": 5}, \"embeddableConfig\": {\"title\": \"\"}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"3202a4c8-ed88-4592-9d39-73846426413b\", \"version\": \"8.0.0-SNAPSHOT\"}, {\"gridData\": {\"i\": \"c18f8802-6189-4966-abe5-30bf2c7c6d63\", \"x\": 0, \"y\": 5, \"w\": 15, \"h\": 16}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"c18f8802-6189-4966-abe5-30bf2c7c6d63\", \"version\": \"8.0.0-SNAPSHOT\", \"embeddableConfig\": {\"title\": \"Subscriptions\"}, \"title\": \"Subscriptions\"}, {\"gridData\": {\"i\": \"0a93b125-de04-466e-a1d0-7b56d1b31b52\", \"x\": 15, \"y\": 5, \"w\": 16, \"h\": 16}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"0a93b125-de04-466e-a1d0-7b56d1b31b52\", \"version\": \"8.0.0-SNAPSHOT\", \"embeddableConfig\": {\"title\": \"Resource groups\"}, \"title\": \"Resource groups\"}, {\"gridData\": {\"i\": \"f6b54b8f-b9e5-4c20-9e4c-8f83935ca739\", \"x\": 31, \"y\": 5, \"w\": 17, \"h\": 16}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"f6b54b8f-b9e5-4c20-9e4c-8f83935ca739\", \"version\": \"8.0.0-SNAPSHOT\", \"embeddableConfig\": {\"title\": \"Resources\"}, \"title\": \"Resources\"}, {\"gridData\": {\"i\": \"323f890e-c4d6-4c84-a3d8-f3d4277d3c2f\", \"x\": 0, \"y\": 21, \"w\": 48, \"h\": 17}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"323f890e-c4d6-4c84-a3d8-f3d4277d3c2f\", \"version\": \"8.0.0-SNAPSHOT\", \"embeddableConfig\": {\"title\": \"Forecast\"}, \"title\": \"Forecast\"}, {\"gridData\": {\"i\": \"fb121db4-1343-4e4d-b1a3-e3f3531ae045\", \"x\": 0, \"y\": 38, \"w\": 48, \"h\": 15}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"fb121db4-1343-4e4d-b1a3-e3f3531ae045\", \"version\": \"8.0.0-SNAPSHOT\", \"embeddableConfig\": {\"title\": \"Daily usage\"}, \"title\": \"Daily usage\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat Azure] Billing overview",
+                "version": 1
+            },
+            "id": "d3efeb30-c1c7-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "dashboard": "7.3.0"
+            },
+            "references": [
+                {
+                    "id": "82a51dd0-c1d7-11ea-b7e7-0f48178cdb3c",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "6ffa7e20-c1da-11ea-b7e7-0f48178cdb3c",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b18053b0-c1da-11ea-b7e7-0f48178cdb3c",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "c8016f70-c1da-11ea-b7e7-0f48178cdb3c",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "9142aca0-c1c7-11ea-b7e7-0f48178cdb3c",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "05d5b3e0-c1c9-11ea-b7e7-0f48178cdb3c",
+                    "name": "panel_5",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2020-07-09T12:59:36.436Z",
+            "version": "WzMyNjMsOF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Billing Filters [Metricbeat Azure]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"updateFiltersOnChange\": true, \"useTimeFilter\": false, \"controls\": [{\"label\": \"Department\", \"type\": \"list\", \"fieldName\": \"azure.billing.department_name\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1594294278147\", \"indexPatternRefName\": \"control_0_index_pattern\"}, {\"label\": \"Account\", \"type\": \"list\", \"fieldName\": \"azure.billing.account_name\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1594294329560\", \"indexPatternRefName\": \"control_1_index_pattern\"}, {\"label\": \"Subscription\", \"type\": \"list\", \"fieldName\": \"azure.subscription_id\", \"options\": {\"multiselect\": false, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549397251041\", \"indexPatternRefName\": \"control_2_index_pattern\"}, {\"label\": \"Resource Group\", \"type\": \"list\", \"fieldName\": \"azure.resource.group\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549512142947\", \"indexPatternRefName\": \"control_3_index_pattern\"}, {\"label\": \"Resource Name\", \"type\": \"list\", \"fieldName\": \"azure.resource.name\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1578578146383\", \"indexPatternRefName\": \"control_4_index_pattern\"}], \"pinFilters\": false}, \"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"Billing Filters [Metricbeat Azure]\"}"
+            },
+            "id": "82a51dd0-c1d7-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_0_index_pattern",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_1_index_pattern",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_2_index_pattern",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_3_index_pattern",
+                    "type": "index-pattern"
+                },
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_4_index_pattern",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-07-09T11:41:03.757Z",
+            "version": "WzMxMzksOF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "Billing subscriptions [Metricbeat Azure]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"type\": \"pie\", \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": true, \"labels\": {\"truncate\": 100, \"show\": false, \"last_level\": true, \"values\": true}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"azure.billing.pretax_cost\", \"customLabel\": \"Total costs\"}, \"id\": \"1\", \"type\": \"sum\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"size\": 5, \"field\": \"azure.subscription_id\", \"otherBucket\": false, \"orderBy\": \"1\", \"order\": \"desc\", \"missingBucketLabel\": \"Missing\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\"}, \"id\": \"2\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"Billing subscriptions [Metricbeat Azure]\"}"
+            },
+            "id": "6ffa7e20-c1da-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-07-09T11:50:51.393Z",
+            "version": "WzMyMjYsOF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "Billing resource groups [Metricbeat Azure]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"type\": \"pie\", \"legendPosition\": \"right\", \"addTooltip\": true, \"row\": true, \"isDonut\": true, \"labels\": {\"truncate\": 100, \"show\": false, \"last_level\": true, \"values\": true}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"azure.billing.pretax_cost\", \"customLabel\": \"Total costs\"}, \"id\": \"1\", \"type\": \"sum\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"size\": 5, \"field\": \"azure.resource.group\", \"otherBucket\": false, \"orderBy\": \"1\", \"order\": \"desc\", \"missingBucketLabel\": \"Missing\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\"}, \"id\": \"2\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"Billing resource groups [Metricbeat Azure]\"}"
+            },
+            "id": "b18053b0-c1da-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-07-09T11:52:41.323Z",
+            "version": "WzMyMjcsOF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "Billing resource names [Metricbeat Azure]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"type\": \"pie\", \"legendPosition\": \"right\", \"addTooltip\": true, \"row\": true, \"isDonut\": true, \"labels\": {\"truncate\": 100, \"show\": false, \"last_level\": true, \"values\": true}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"field\": \"azure.billing.pretax_cost\", \"customLabel\": \"Total costs\"}, \"id\": \"1\", \"type\": \"sum\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"size\": 5, \"field\": \"azure.resource.name\", \"otherBucket\": false, \"orderBy\": \"1\", \"order\": \"desc\", \"missingBucketLabel\": \"Missing\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\"}, \"id\": \"2\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"Billing resource names [Metricbeat Azure]\"}"
+            },
+            "id": "c8016f70-c1da-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2020-07-09T11:53:19.079Z",
+            "version": "WzMyMjgsOF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Charges Forecast [Metricbeat Azure]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"1f64e4e0-c1c7-11ea-879f-d1f118e66220\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"azure.billing.usage_date\", \"color\": \"rgba(25,77,51,1)\", \"split_mode\": \"everything\", \"split_color_mode\": \"kibana\", \"type\": \"timeseries\", \"formatter\": \"number\", \"steps\": 1, \"chart_type\": \"line\", \"value_template\": \"{{value}}\", \"separate_axis\": 0, \"fill\": \"0.7\", \"label\": \"Actual costs\", \"metrics\": [{\"size\": 1, \"field\": \"azure.billing.actual_cost\", \"type\": \"top_hit\", \"order\": \"desc\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"order_by\": \"@timestamp\", \"agg_with\": \"avg\"}], \"axis_position\": \"right\", \"override_index_pattern\": 0, \"point_size\": 1, \"stacked\": \"none\", \"line_width\": 1, \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"hide_in_legend\": 0}, {\"value_template\": \"{{value}}\", \"split_mode\": \"everything\", \"split_color_mode\": \"kibana\", \"type\": \"timeseries\", \"formatter\": \"number\", \"steps\": 0, \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0.5\", \"label\": \"Forecast costs\", \"metrics\": [{\"size\": 1, \"field\": \"azure.billing.forecast_cost\", \"type\": \"top_hit\", \"order\": \"desc\", \"id\": \"d09632c1-c120-11ea-b262-d3ff1f3885f8\", \"order_by\": \"@timestamp\", \"agg_with\": \"avg\"}], \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"offset_time\": \"\", \"id\": \"d09632c0-c120-11ea-b262-d3ff1f3885f8\", \"line_width\": \"2\"}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"gauge_width\": 10, \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"22692430-c1c7-11ea-879f-d1f118e66220\"}], \"bar_color_rules\": [{\"id\": \"20dbcd70-c1c7-11ea-879f-d1f118e66220\"}], \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"azure.billing.usage_date\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"24h\", \"show_grid\": 1, \"tooltip_mode\": \"show_all\", \"drop_last_bucket\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Charges Forecast [Metricbeat Azure]\"}"
+            },
+            "id": "9142aca0-c1c7-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-07-09T09:45:25.575Z",
+            "version": "WzMwMTEsOF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Usage Details [Metricbeat Azure]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"1f64e4e0-c1c7-11ea-879f-d1f118e66220\"}], \"gauge_style\": \"half\", \"type\": \"timeseries\", \"series\": [{\"value_template\": \"{{value}}\", \"split_mode\": \"everything\", \"split_color_mode\": \"kibana\", \"type\": \"timeseries\", \"formatter\": \"number\", \"steps\": 0, \"chart_type\": \"bar\", \"separate_axis\": 0, \"fill\": \"0.5\", \"label\": \"Usage Details\", \"metrics\": [{\"size\": 1, \"field\": \"azure.billing.pretax_cost\", \"type\": \"sum\", \"order\": \"desc\", \"id\": \"d09632c1-c120-11ea-b262-d3ff1f3885f8\", \"order_by\": \"@timestamp\", \"agg_with\": \"sum\"}], \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(22,165,165,1)\", \"offset_time\": \"\", \"id\": \"d09632c0-c120-11ea-b262-d3ff1f3885f8\", \"line_width\": \"2\"}], \"index_pattern\": \"metricbeat-*\", \"gauge_inner_width\": 10, \"gauge_width\": 10, \"axis_position\": \"left\", \"gauge_color_rules\": [{\"id\": \"22692430-c1c7-11ea-879f-d1f118e66220\"}], \"bar_color_rules\": [{\"id\": \"20dbcd70-c1c7-11ea-879f-d1f118e66220\"}], \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"isModelInvalid\": false, \"axis_scale\": \"normal\", \"time_field\": \"azure.billing.usage_start\", \"default_timefield\": \"@timestamp\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"interval\": \"24h\", \"show_grid\": 1, \"tooltip_mode\": \"show_all\", \"drop_last_bucket\": 1, \"show_legend\": 1}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"Usage Details [Metricbeat Azure]\"}"
+            },
+            "id": "05d5b3e0-c1c9-11ea-b7e7-0f48178cdb3c",
+            "migrationVersion": {
+                "visualization": "7.4.2"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2020-07-09T11:36:42.328Z",
+            "version": "WzMwOTQsOF0="
+        }
+    ],
+    "version": "8.0.0-SNAPSHOT"
+}

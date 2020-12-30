@@ -1,0 +1,415 @@
+{
+    "objects": [
+        {
+            "attributes": {
+                "description": "Overview of AWS Metrics",
+                "hits": 0,
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "optionsJSON": "{\"hidePanelTitles\": false, \"useMargins\": true}",
+                "panelsJSON": "[{\"gridData\": {\"i\": \"2\", \"x\": 0, \"y\": 0, \"w\": 9, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_0\", \"panelIndex\": \"2\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"3\", \"x\": 9, \"y\": 0, \"w\": 10, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_1\", \"panelIndex\": \"3\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"4\", \"x\": 19, \"y\": 0, \"w\": 29, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_2\", \"panelIndex\": \"4\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"6\", \"x\": 0, \"y\": 7, \"w\": 9, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_3\", \"panelIndex\": \"6\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"7\", \"x\": 9, \"y\": 7, \"w\": 9, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_4\", \"panelIndex\": \"7\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"9\", \"x\": 18, \"y\": 7, \"w\": 15, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_5\", \"panelIndex\": \"9\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"10\", \"x\": 33, \"y\": 7, \"w\": 15, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_6\", \"panelIndex\": \"10\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"12\", \"x\": 0, \"y\": 14, \"w\": 13, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_7\", \"panelIndex\": \"12\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"14\", \"x\": 13, \"y\": 14, \"w\": 20, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_8\", \"panelIndex\": \"14\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"15\", \"x\": 33, \"y\": 14, \"w\": 15, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_9\", \"panelIndex\": \"15\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"17\", \"x\": 15, \"y\": 21, \"w\": 16, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_10\", \"panelIndex\": \"17\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"18\", \"x\": 0, \"y\": 21, \"w\": 15, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_11\", \"panelIndex\": \"18\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"19\", \"x\": 31, \"y\": 21, \"w\": 17, \"h\": 7}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_12\", \"panelIndex\": \"19\", \"version\": \"7.0.0\"}, {\"gridData\": {\"i\": \"24\", \"x\": 0, \"y\": 28, \"w\": 24, \"h\": 9}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_13\", \"panelIndex\": \"24\", \"version\": \"7.2.0\"}, {\"gridData\": {\"i\": \"25\", \"x\": 24, \"y\": 28, \"w\": 24, \"h\": 9}, \"embeddableConfig\": {}, \"panelRefName\": \"panel_14\", \"panelIndex\": \"25\", \"version\": \"7.2.0\"}]",
+                "timeRestore": false,
+                "title": "[Metricbeat AWS] Overview",
+                "version": 1
+            },
+            "id": "fac28650-7349-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "dashboard": "7.0.0"
+            },
+            "references": [
+                {
+                    "id": "b5308940-7347-11e9-816b-07687310a99a",
+                    "name": "panel_0",
+                    "type": "visualization"
+                },
+                {
+                    "id": "09db13f0-2bdd-11e9-9fe1-cde861544141",
+                    "name": "panel_1",
+                    "type": "visualization"
+                },
+                {
+                    "id": "be8828d0-f7f6-11e8-af03-c999c9dea608-ecs",
+                    "name": "panel_2",
+                    "type": "visualization"
+                },
+                {
+                    "id": "81d83c70-4762-11e9-8062-c98a86cb6f94",
+                    "name": "panel_3",
+                    "type": "visualization"
+                },
+                {
+                    "id": "58e17c10-7349-11e9-816b-07687310a99a",
+                    "name": "panel_4",
+                    "type": "visualization"
+                },
+                {
+                    "id": "4658f540-734a-11e9-816b-07687310a99a",
+                    "name": "panel_5",
+                    "type": "visualization"
+                },
+                {
+                    "id": "95b322f0-734a-11e9-816b-07687310a99a",
+                    "name": "panel_6",
+                    "type": "visualization"
+                },
+                {
+                    "id": "b2191dd0-734c-11e9-816b-07687310a99a",
+                    "name": "panel_7",
+                    "type": "visualization"
+                },
+                {
+                    "id": "42016bf0-728f-11e9-9a7b-4d62d5bcf4fc",
+                    "name": "panel_8",
+                    "type": "visualization"
+                },
+                {
+                    "id": "9121ac90-734d-11e9-816b-07687310a99a",
+                    "name": "panel_9",
+                    "type": "visualization"
+                },
+                {
+                    "id": "128fd450-734e-11e9-816b-07687310a99a",
+                    "name": "panel_10",
+                    "type": "visualization"
+                },
+                {
+                    "id": "54e88a40-734e-11e9-816b-07687310a99a",
+                    "name": "panel_11",
+                    "type": "visualization"
+                },
+                {
+                    "id": "398d12d0-7352-11e9-816b-07687310a99a",
+                    "name": "panel_12",
+                    "type": "visualization"
+                },
+                {
+                    "id": "4bf62a10-8310-11e9-ac83-47df3568ff90",
+                    "name": "panel_13",
+                    "type": "visualization"
+                },
+                {
+                    "id": "d2f46190-830f-11e9-ac83-47df3568ff90",
+                    "name": "panel_14",
+                    "type": "visualization"
+                }
+            ],
+            "type": "dashboard",
+            "updated_at": "2019-06-14T17:28:35.266Z",
+            "version": "WzI5MjYsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Region Filter [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"updateFiltersOnChange\": true, \"useTimeFilter\": false, \"controls\": [{\"label\": \"region\", \"type\": \"list\", \"fieldName\": \"cloud.region\", \"options\": {\"multiselect\": true, \"size\": 5, \"dynamicOptions\": true, \"type\": \"terms\", \"order\": \"desc\"}, \"parent\": \"\", \"id\": \"1549397251041\", \"indexPatternRefName\": \"control_0_index_pattern\"}], \"pinFilters\": false}, \"aggs\": [], \"type\": \"input_control_vis\", \"title\": \"AWS Region Filter\"}"
+            },
+            "id": "b5308940-7347-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "control_0_index_pattern",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2NzQsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}, \"indexRefName\": \"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+                },
+                "title": "EC2 Instance State [Metricbeat AWS] ECS",
+                "uiStateJSON": "{\"vis\": {\"legendOpen\": true, \"colors\": {\"16\": \"#629E51\", \"272\": \"#DEDAF7\", \"80\": \"#E24D42\", \"stopped\": \"#E24D42\", \"running\": \"#7EB26D\"}}}",
+                "version": 1,
+                "visState": "{\"params\": {\"addLegend\": true, \"type\": \"pie\", \"legendPosition\": \"right\", \"addTooltip\": true, \"isDonut\": false, \"labels\": {\"truncate\": 100, \"show\": true, \"last_level\": true, \"values\": true}}, \"aggs\": [{\"schema\": \"metric\", \"enabled\": true, \"params\": {\"customLabel\": \"EC2 Instance State\"}, \"id\": \"1\", \"type\": \"count\"}, {\"schema\": \"segment\", \"enabled\": true, \"params\": {\"size\": 5, \"field\": \"aws.ec2.instance.state.name\", \"otherBucket\": false, \"customLabel\": \"\", \"orderBy\": \"1\", \"order\": \"desc\", \"missingBucketLabel\": \"Missing\", \"missingBucket\": false, \"otherBucketLabel\": \"Other\"}, \"id\": \"2\", \"type\": \"terms\"}], \"type\": \"pie\", \"title\": \"EC2 Instance State [Metricbeat AWS] ECS\"}"
+            },
+            "id": "09db13f0-2bdd-11e9-9fe1-cde861544141",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [
+                {
+                    "id": "metricbeat-*",
+                    "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+                    "type": "index-pattern"
+                }
+            ],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2NzUsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "EC2 CPU Utilization [Metricbeat AWS] ECS",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \"5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"cloud.instance.id\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": \"\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS EC2 CPU Utilization ECS\", \"metrics\": [{\"field\": \"aws.ec2.cpu.total.pct\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"axis_formatter\": \"number\", \"annotations\": [], \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS EC2 CPU Utilization ECS\"}"
+            },
+            "id": "be8828d0-f7f6-11e8-af03-c999c9dea608-ecs",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2NzYsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "S3 Total Error 4xx [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"59207fe0-4762-11e9-bf81-69a4e579cab5\"}], \"interval\": \"auto\", \"type\": \"metric\", \"series\": [{\"split_mode\": \"everything\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"Total # of HTTP 4xx Errors\", \"metrics\": [{\"field\": \"aws.s3_request.errors.4xx\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"5ad9a190-4762-11e9-bf81-69a4e579cab5\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS S3 Total Error 4xx\"}"
+            },
+            "id": "81d83c70-4762-11e9-8062-c98a86cb6f94",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:28.760Z",
+            "version": "WzI2OTUsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "S3 Total Error 5xx [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"59207fe0-4762-11e9-bf81-69a4e579cab5\"}], \"interval\": \"auto\", \"type\": \"metric\", \"series\": [{\"split_mode\": \"everything\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"Total # of HTTP 5xx Errors\", \"metrics\": [{\"field\": \"aws.s3_request.errors.5xx\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"5ad9a190-4762-11e9-bf81-69a4e579cab5\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS S3 Total Error 5xx\"}"
+            },
+            "id": "58e17c10-7349-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2NzgsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "SQS Empty Receives Top5 [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"auto\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"aws.sqs.queue.name\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"AWS SQS Empty Receives\", \"metrics\": [{\"field\": \"aws.sqs.empty_receives\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"23be77d0-734a-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"type\": \"top_n\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS SQS Empty Receives Top5\"}"
+            },
+            "id": "4658f540-734a-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2NzksNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "SQS Messages Delayed Top5 [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"auto\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"aws.sqs.queue.name\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"AWS SQS Messages Delayed\", \"metrics\": [{\"field\": \"aws.sqs.messages.delayed\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"23be77d0-734a-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"type\": \"top_n\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS SQS Messages Delayed Top5\"}"
+            },
+            "id": "95b322f0-734a-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODAsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch ELB Request Count Top5 [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"interval\": \"auto\", \"time_field\": \"@timestamp\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": 0.5, \"label\": \"ELB Request Count Top5\", \"metrics\": [{\"field\": \"aws.elb.metrics.RequestCount\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"94f2ce40-734c-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"type\": \"top_n\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch ELB Request Count Top5\"}"
+            },
+            "id": "b2191dd0-734c-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODEsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch ELB Latency [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"axis_scale\": \"normal\", \"interval\": \"5m\", \"type\": \"timeseries\", \"background_color_rules\": [{\"id\": \"23428b30-f7f2-11e8-bff8-21537b07dd44\"}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"split_color_mode\": \"rainbow\", \"formatter\": \"number\", \"series_drop_last_bucket\": 1, \"steps\": 0, \"chart_type\": \"line\", \"filter\": \"\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"AWS Cloudwatch ELB Latency\", \"metrics\": [{\"field\": \"aws.elb.metrics.Latency\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"rgba(104,188,0,1)\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-8*\", \"annotations\": [], \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"2592bcc0-f7f2-11e8-bff8-21537b07dd44\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch ELB Latency\"}"
+            },
+            "id": "42016bf0-728f-11e9-9a7b-4d62d5bcf4fc",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODIsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch ELB Unhealthy Host Count [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"cbb498f0-734c-11e9-a683-47ca322fa6f9\"}], \"interval\": \"5m\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"aws.dimensions.LoadBalancerName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"ELB Unhealthy Host Count\", \"metrics\": [{\"field\": \"aws.elb.metrics.UnHealthyHostCount\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"94f2ce40-734c-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch ELB Unhealthy Host Count\"}"
+            },
+            "id": "9121ac90-734d-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODMsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch Lambda Invocations Top5 [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"cbb498f0-734c-11e9-a683-47ca322fa6f9\"}], \"interval\": \"5m\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"aws.dimensions.FunctionName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Lambda Invocations\", \"metrics\": [{\"field\": \"aws.lambda.metrics.Invocations\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"94f2ce40-734c-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch Lambda Invocations Top5\"}"
+            },
+            "id": "128fd450-734e-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODQsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch Lambda Errors Top5 [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"cbb498f0-734c-11e9-a683-47ca322fa6f9\"}], \"interval\": \"5m\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"aws.dimensions.FunctionName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Lambda Errors\", \"metrics\": [{\"field\": \"aws.lambda.metrics.Errors\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"94f2ce40-734c-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch Lambda Errors Top5\"}"
+            },
+            "id": "54e88a40-734e-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODUsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch Lambda Throttles Top5 [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"cbb498f0-734c-11e9-a683-47ca322fa6f9\"}], \"interval\": \"5m\", \"type\": \"top_n\", \"series\": [{\"terms_field\": \"aws.dimensions.FunctionName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"number\", \"chart_type\": \"line\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"Lambda Throttles\", \"metrics\": [{\"field\": \"aws.lambda.metrics.Throttles\", \"type\": \"avg\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}], \"terms_order_by\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"show_grid\": 1, \"index_pattern\": \"metricbeat-*\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"axis_position\": \"left\", \"bar_color_rules\": [{\"id\": \"94f2ce40-734c-11e9-a683-47ca322fa6f9\"}], \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"@timestamp\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch Lambda Throttles Top5\"}"
+            },
+            "id": "398d12d0-7352-11e9-816b-07687310a99a",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:02:27.742Z",
+            "version": "WzI2ODYsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch ECS CPU Available [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"bb21d180-830d-11e9-9c4c-391fa0a2e15f\"}], \"interval\": \"5m\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.ClusterName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"percent\", \"chart_type\": \"line\", \"filter\": \"(aws.cloudwatch.namespace:\\\"AWS/ECS\\\") AND (_exists_: aws.ecs.metrics.CPUReservation) AND (_exists_: aws.ecs.metrics.CPUUtilization)\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"\", \"metrics\": [{\"field\": \"aws.ecs.metrics.CPUUtilization\", \"type\": \"sum\", \"id\": \"17f8ddf0-830d-11e9-9f3d-ed346f48a007\"}, {\"field\": \"aws.ecs.metrics.CPUReservation\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}, {\"variables\": [{\"field\": \"17f8ddf0-830d-11e9-9f3d-ed346f48a007\", \"name\": \"util\", \"id\": \"6f338920-830e-11e9-9c4c-391fa0a2e15f\"}, {\"field\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"name\": \"res\", \"id\": \"7ab9f9a0-830e-11e9-9c4c-391fa0a2e15f\"}], \"id\": \"68a93050-830e-11e9-9c4c-391fa0a2e15f\", \"type\": \"math\", \"script\": \"(params.res - params.util) / 100\"}], \"terms_order_by\": \"_key\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"filter\": \"\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch ECS CPU Available\"}"
+            },
+            "id": "4bf62a10-8310-11e9-ac83-47df3568ff90",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:48:26.084Z",
+            "version": "WzI5NDEsNF0="
+        },
+        {
+            "attributes": {
+                "description": "",
+                "kibanaSavedObjectMeta": {
+                    "searchSourceJSON": "{\"filter\": [], \"query\": {\"query\": \"\", \"language\": \"kuery\"}}"
+                },
+                "title": "Cloudwatch ECS Memory Available [Metricbeat AWS]",
+                "uiStateJSON": "{}",
+                "version": 1,
+                "visState": "{\"params\": {\"background_color_rules\": [{\"id\": \"bb21d180-830d-11e9-9c4c-391fa0a2e15f\"}], \"interval\": \"5m\", \"type\": \"timeseries\", \"series\": [{\"terms_field\": \"aws.dimensions.ClusterName\", \"terms_size\": \"5\", \"split_mode\": \"terms\", \"formatter\": \"percent\", \"value_template\": \"{{value}}\", \"chart_type\": \"line\", \"filter\": \"(aws.cloudwatch.namespace:\\\"AWS/ECS\\\") AND (_exists_: aws.ecs.metrics.MemoryReservation) AND (_exists_: aws.ecs.metrics.MemoryUtilization)\", \"separate_axis\": 0, \"fill\": \"0\", \"label\": \"\", \"metrics\": [{\"field\": \"aws.ecs.metrics.MemoryUtilization\", \"type\": \"sum\", \"id\": \"17f8ddf0-830d-11e9-9f3d-ed346f48a007\"}, {\"field\": \"aws.ecs.metrics.MemoryReservation\", \"type\": \"sum\", \"id\": \"61ca57f2-469d-11e7-af02-69e470af7417\"}, {\"variables\": [{\"field\": \"17f8ddf0-830d-11e9-9f3d-ed346f48a007\", \"name\": \"util\", \"id\": \"6f338920-830e-11e9-9c4c-391fa0a2e15f\"}, {\"field\": \"61ca57f2-469d-11e7-af02-69e470af7417\", \"name\": \"res\", \"id\": \"7ab9f9a0-830e-11e9-9c4c-391fa0a2e15f\"}], \"id\": \"68a93050-830e-11e9-9c4c-391fa0a2e15f\", \"type\": \"math\", \"script\": \"(params.res - params.util) / 100\"}], \"terms_order_by\": \"_key\", \"axis_position\": \"right\", \"point_size\": 1, \"stacked\": \"none\", \"color\": \"#68BC00\", \"id\": \"61ca57f1-469d-11e7-af02-69e470af7417\", \"line_width\": 1}], \"default_timefield\": \"@timestamp\", \"index_pattern\": \"metricbeat-*\", \"filter\": \"\", \"axis_formatter\": \"number\", \"default_index_pattern\": \"metricbeat-*\", \"axis_scale\": \"normal\", \"show_grid\": 1, \"axis_position\": \"left\", \"show_legend\": 1, \"id\": \"61ca57f0-469d-11e7-af02-69e470af7417\", \"time_field\": \"\"}, \"aggs\": [], \"type\": \"metrics\", \"title\": \"AWS Cloudwatch ECS Memory Available\"}"
+            },
+            "id": "d2f46190-830f-11e9-ac83-47df3568ff90",
+            "migrationVersion": {
+                "visualization": "7.2.0"
+            },
+            "references": [],
+            "type": "visualization",
+            "updated_at": "2019-06-14T17:47:50.042Z",
+            "version": "WzI5NDAsNF0="
+        }
+    ],
+    "version": "7.2.0"
+}
