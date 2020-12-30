@@ -52,3 +52,12 @@
     zone: '{{ gcp_zone }}'
 
   register: instance
+
+- name: Wait for VM to start
+  wait_for:
+    host: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
+    port: 22
+    delay: 10
+    sleep: 1
+    state: started
+  when: instance.changed

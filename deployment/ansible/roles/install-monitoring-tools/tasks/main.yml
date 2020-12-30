@@ -18,14 +18,20 @@
       - elasticsearch
       - kibana
     state: present
+  register: apt_elasticsearch
 
 
 - name: Copy Elasticsearch configuration
   become: yes
   template:
-    src: 'elasticsearch.yml.j2'
-    dest: '/etc/elasticsearch/elasticsearch.yml'
+    src: '{{ item }}'
+    dest: '/etc/elasticsearch/{{ item | regex_replace(".j2") }}'
     mode: '0644'
+  loop:
+    - elasticsearch.yml.j2
+    - jvm.options
+  tags:
+    - copy-files
 
 - name: Copy Kibana configuration
   become: yes
@@ -33,6 +39,10 @@
     src: 'kibana.yml.j2'
     dest: '/etc/kibana/kibana.yml'
     mode: '0644'
+
+- name: Set max map count
+  become: yes
+  shell: 'sysctl -w vm.max_map_count=262144'
 
 - name: Start Elasticsearch & Kibana services on system startup
   become: yes
@@ -43,11 +53,7 @@
     - kibana
     - elasticsearch
 
-- name: Restart Elasticsearch & Kibana services
+- name: Restart Monitoring VM
   become: yes
-  service:
-    name: '{{ item }}'
-    state: restarted
-  loop:
-    - kibana
-    - elasticsearch
+  reboot:
+  when: apt_elasticsearch.changed
