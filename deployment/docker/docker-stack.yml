@@ -163,7 +163,7 @@ services:
             - REDIS_PASSWORD=${REDIS_PASSWORD}
             - REDIS_HOSTS=${REDIS_MASTER_HOST}, redis-slave-1, redis-slave-2
         deploy:
-            replicas: 1
+            replicas: 2
             restart_policy:
                 condition: on-failure
 
