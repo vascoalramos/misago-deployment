@@ -1,8 +1,8 @@
 plugin: gcp_compute
-projects:
-  - marine-cycle-273002
 auth_kind: serviceaccount
 service_account_file: ./marine-cycle.json
+projects:
+  - marine-cycle-273002
 keyed_groups:
   - key: labels['type']
     separator: ""
