@@ -8,7 +8,7 @@
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
     project: '{{ gcp_project }}'
-    zone: '{{ gcp_zone }}'
+    zone: '{{ zone }}'
   
 - name: Delete VM address
   gcp_compute_address:
@@ -17,7 +17,7 @@
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
     project: '{{ gcp_project }}'
-    region: '{{ gcp_region }}'
+    region: '{{ region }}'
 
     state: absent
     
@@ -29,4 +29,4 @@
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
     project: '{{ gcp_project }}'
-    zone: '{{ gcp_zone }}'
+    zone: '{{ zone }}'
