@@ -3,7 +3,16 @@ Using this playbook requires:
   - ansible-galaxy collection install ansible.posix
 
 To run a full provisioning (creates all VMs, installs docker, monitoring tools & deploys a stack):
-  - ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "provision"
+  - ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "create-vms,provision"
 
 To delete the VMs after testing that this does indeed work:
   - ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "delete-vms"
+
+To scale up or down a service:
+  - ANSIBLE_CONFIG=ansible.cfg ansible-playbook -i hosts.gcp.yml scale.yml -e "web=3 celery=1 misago=3"
+  - Available services:
+    - web - default 3
+    - celery - default 1
+    - misago - default 3
+  - You can specify just one service or any number of services at once by omiting/including the relevant parts from the above command:
+    - ANSIBLE_CONFIG=ansible.cfg ansible-playbook -i hosts.gcp.yml scale.yml -e "web=3"
