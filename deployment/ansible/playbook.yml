@@ -70,4 +70,5 @@
         compose:
           - /opt/misago/docker-stack.yml
   tags:
+    - start-stack
     - provision

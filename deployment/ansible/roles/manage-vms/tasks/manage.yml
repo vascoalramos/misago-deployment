@@ -4,7 +4,6 @@
   include: create.yml
   tags:
     - create-vms
-    - provision
   # We only want to import the inventory if the inventory isn't already imported by the -i option
   when: name not in hostvars.keys()
 

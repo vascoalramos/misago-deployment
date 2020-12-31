@@ -21,6 +21,12 @@
     state: present
   register: apt_docker
 
+- name: Install Docker Compose
+  become: yes
+  pip:
+    name:
+      - docker-compose
+
 - name: Reboot machine
   become: yes
   reboot:
