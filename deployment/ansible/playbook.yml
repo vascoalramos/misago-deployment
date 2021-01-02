@@ -9,10 +9,19 @@
     preemtible: true
 
 - name: Update & Upgrade all VMs
-  hosts: all
-  become: yes
+  hosts:
+    - monitor
+    - managers
+    - workers
   roles:
     - common
+  tags:
+    - provision
+  
+- name: Install Monitoring tools on Monitoring VM
+  hosts: monitor
+  roles:
+    - install-monitoring-tools
   tags:
     - provision
 
@@ -20,8 +29,46 @@
   hosts:
     - managers
     - workers
-  become: yes
   roles:
     - install-docker
   tags:
+    - provision
+
+- name: Install the Docker Stack files on the manager nodes
+  hosts: managers
+  roles:
+    - install-stack
+  tags:
+    - provision
+
+- name: Join the Docker Swarm on worker nodes
+  hosts: workers
+  become: yes
+  tasks:
+    - name: Join the Docker Swarm
+      become: yes
+      community.general.docker_swarm:
+        state: join
+        remote_addrs:
+          - '{{ hostvars[groups["managers"][0]]["internal_ip"] }}'
+        join_token: '{{ hostvars[groups["managers"][0]]["swarm_info"].swarm_facts.JoinTokens.Worker }}'
+        advertise_addr: '{{ internal_ip }}'
+  tags:
+    - provision
+
+- name: Start the Stack
+  hosts: managers
+  become: yes
+  run_once: true
+  tasks:
+    - name: Start Docker Stack
+      become: yes
+      environment: '{{ env_vars }}'
+      community.general.docker_stack:
+        state: present
+        name: misago
+        compose:
+          - /opt/misago/docker-stack.yml
+  tags:
+    - start-stack
     - provision

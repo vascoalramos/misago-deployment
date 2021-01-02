@@ -4,16 +4,13 @@
   include: create.yml
   tags:
     - create-vms
+  # We only want to import the inventory if the inventory isn't already imported by the -i option
+  when: name not in hostvars.keys()
 
 - 
   include: delete.yml
   tags:
     - delete-vms
-
--
-  include: inventory.yml
-  tags:
-    - inventory
   
 -
   include: start.yml

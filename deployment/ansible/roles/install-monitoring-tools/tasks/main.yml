@@ -1,0 +1,59 @@
+---
+
+- name: Install Elasticsearch Repository Key
+  become: yes
+  apt_key:
+    url: 'https://artifacts.elastic.co/GPG-KEY-elasticsearch'
+
+- name: Install Elasticsearch Repository
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://artifacts.elastic.co/packages/7.x/apt stable main"
+    state: present
+
+- name: Install Elasticsearch & Kibana
+  become: yes
+  apt:
+    pkg:
+      - elasticsearch
+      - kibana
+    state: present
+  register: apt_elasticsearch
+
+
+- name: Copy Elasticsearch configuration
+  become: yes
+  template:
+    src: '{{ item }}'
+    dest: '/etc/elasticsearch/{{ item | regex_replace(".j2") }}'
+    mode: '0644'
+  loop:
+    - elasticsearch.yml.j2
+    - jvm.options
+  tags:
+    - copy-files
+
+- name: Copy Kibana configuration
+  become: yes
+  template:
+    src: 'kibana.yml.j2'
+    dest: '/etc/kibana/kibana.yml'
+    mode: '0644'
+
+- name: Set max map count
+  become: yes
+  shell: 'sysctl -w vm.max_map_count=262144'
+
+- name: Start Elasticsearch & Kibana services on system startup
+  become: yes
+  systemd:
+    name: '{{ item }}'
+    enabled: yes
+  loop:
+    - kibana
+    - elasticsearch
+
+- name: Restart Monitoring VM
+  become: yes
+  reboot:
+  when: apt_elasticsearch.changed

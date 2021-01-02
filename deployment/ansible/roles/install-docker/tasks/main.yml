@@ -1,0 +1,33 @@
+---
+
+- name: Install Docker Repository Key
+  become: yes
+  apt_key:
+    url: 'https://download.docker.com/linux/ubuntu/gpg'
+
+- name: Install Docker Repository
+  become: yes
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release | lower }} stable"
+    state: present
+
+- name: Install Docker Engine
+  become: yes
+  apt:
+    pkg:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+  register: apt_docker
+
+- name: Install Docker Compose
+  become: yes
+  pip:
+    name:
+      - docker-compose
+
+- name: Reboot machine
+  become: yes
+  reboot:
+  when: apt_docker.changed

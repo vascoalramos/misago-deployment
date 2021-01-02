@@ -1,14 +1,20 @@
 ---
 
+- name: Create NFS Storage Disk
+  include: create-nfs.yml
+
 - name: Manage Monitoring VM
-  include: manage.yml name=project-vm-monitoring type=e2-medium group=monitor
+  include: manage.yml name=project-vm-monitoring type=e2-standard-2 group=monitor static_ip=true
 
 - name: Manage Swarm Manager VMs
-  include: manage.yml name=project-vm-manager1 type=e2-small group=managers
-- include: manage.yml name=project-vm-manager2 type=e2-small group=managers
-- include: manage.yml name=project-vm-manager3 type=e2-small group=managers
+  include: manage.yml name=project-vm-manager1 type=e2-medium group=managers static_ip=true
+- include: manage.yml name=project-vm-manager2 type=e2-medium group=managers static_ip=true
+- include: manage.yml name=project-vm-manager3 type=e2-medium group=managers static_ip=true
 
 - name: Manage worker VMs
-  include: manage.yml name=project-vm-worker1 type=e2-micro group=workers
-- include: manage.yml name=project-vm-worker2 type=e2-micro group=workers
-- include: manage.yml name=project-vm-worker3 type=e2-micro group=workers
+  include: manage.yml name=project-vm-worker1 type=e2-medium group=workers static_ip=true
+- include: manage.yml name=project-vm-worker2 type=e2-medium group=workers static_ip=false
+- include: manage.yml name=project-vm-worker3 type=e2-medium group=workers static_ip=false
+
+- name: Delete NFS Storage Disk
+  include: delete-nfs.yml

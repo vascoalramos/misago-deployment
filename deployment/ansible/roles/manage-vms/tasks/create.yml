@@ -11,8 +11,7 @@
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
     project: '{{ gcp_project }}'
-    zone: '{{ gcp_zone }}'
-
+    zone: '{{ zone }}'
   register: disk
 
 - name: Create VM address
@@ -23,9 +22,9 @@
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
     project: '{{ gcp_project }}'
-    region: '{{ gcp_region }}'
-    
+    region: '{{ region }}'
   register: address
+  when: static_ip is defined and static_ip == 'true'
 
 - name: Create VM instance
   gcp_compute_instance:
@@ -45,10 +44,26 @@
             type: 'ONE_TO_ONE_NAT'
     scheduling:
       preemptible: '{{ preemptible | default("true") }}'
+    labels:
+      type: '{{ group }}'
     
     auth_kind: '{{ gcp_auth_kind }}'
     service_account_file: '{{ gcp_service_account_file }}'
     project: '{{ gcp_project }}'
-    zone: '{{ gcp_zone }}'
-
+    zone: '{{ zone }}'
   register: instance
+
+- name: Wait for VM to start
+  wait_for:
+    host: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
+    port: 22
+    delay: 10
+    sleep: 1
+    state: started
+
+- name: Add host to inventory
+  add_host:
+    hostname: '{{ name }}'
+    ansible_host: '{{ instance.networkInterfaces[0].accessConfigs[0].natIP }}'
+    internal_ip: '{{ instance.networkInterfaces[0].networkIP }}'
+    groupname: '{{ group }}'

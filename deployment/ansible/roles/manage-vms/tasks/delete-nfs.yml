@@ -1,0 +1,22 @@
+---
+
+- name: Delete NFS Disk
+  google.cloud.gcp_filestore_instance:
+    name: 'disk-nfs'
+    state: absent
+    tier: STANDARD
+    file_shares:
+      - capacity_gb: 1024
+        name: share_nfs
+    networks:
+      - network: default
+        modes:
+          - MODE_IPV4
+
+    auth_kind: '{{ gcp_auth_kind }}'
+    service_account_file: '{{ gcp_service_account_file }}'
+    project: '{{ gcp_project }}'
+    zone: '{{ zone }}'
+
+  tags:
+    - delete-vms
