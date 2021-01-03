@@ -2,3 +2,6 @@
 .vagrant/
 ### VSCode ###
 .vscode/
+### JMeter ###
+benchmarking/*.log
+benchmarking/output
