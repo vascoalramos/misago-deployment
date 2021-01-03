@@ -3,5 +3,5 @@
 ### VSCode ###
 .vscode/
 ### JMeter ###
-benchmarking/*.log
+benchmarking/jmeter.log
 benchmarking/output
