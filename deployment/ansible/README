@@ -1,6 +1,9 @@
 Using this playbook requires:
-  - ansible-galaxy collection install google.cloud
-  - ansible-galaxy collection install ansible.posix
+  - Python 3 installed and operational
+  - $ pip3 install requests google-auth
+  - $ ansible-galaxy collection install google.cloud
+  - $ ansible-galaxy collection install ansible.posix
+  - $ ansible-galaxy collection install community.general
 
 To run a full provisioning (creates all VMs, installs docker, monitoring tools & deploys a stack):
   - ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "create-vms,provision"
