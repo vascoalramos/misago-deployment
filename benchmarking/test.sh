@@ -8,6 +8,7 @@ if test "$#" -ne 1; then
 fi
 
 date=`date "+%Y-%m-%d_%H-%M-%S_%3N"`
+mkdir -p output
 
 case $1 in 
     "users") ./apache-jmeter-5.4/bin/jmeter -n -t load_tests/create_test_users.jmx -l output/users_$date/results.csv -e -o output/users_$date/ ;;
