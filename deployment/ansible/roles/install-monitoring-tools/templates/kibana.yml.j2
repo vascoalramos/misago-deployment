@@ -1,5 +1,5 @@
 # Kibana is served by a back end server. This setting specifies the port to use.
-server.port: 10000
+server.port: {{ env_vars.KIBANA_PORT }}
 
 # Specifies the address to which the Kibana server will bind. IP addresses and host names are both valid values.
 # The default is 'localhost', which usually means remote machines will not be able to connect.
@@ -25,7 +25,7 @@ server.host: "0.0.0.0"
 #server.name: "your-hostname"
 
 # The URLs of the Elasticsearch instances to use for all your queries.
-elasticsearch.hosts: ["http://{{ hostvars[groups['monitor'][0]]['internal_ip'] }}:9200"]
+elasticsearch.hosts: ["http://{{ env_vars.MONITOR_IP }}:{{ env_vars.ELASTIC_PORT }}"]
 
 # Kibana uses an index in Elasticsearch to store saved searches, visualizations and
 # dashboards. Kibana creates a new index if the index doesn't already exist.

@@ -37,3 +37,5 @@ env_vars:
 
     # Monitoring
     MONITOR_IP: '{{ hostvars[groups["monitor"][0]]["internal_ip"] }}'
+    ELASTIC_PORT: 9200
+    KIBANA_PORT: 10000
