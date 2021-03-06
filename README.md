@@ -1,5 +1,15 @@
 # Misago Deployment
 
+## Full Deployment
+
+### Orquestration
+
+### Provisiong
+
+### Monitoring
+
+### Benchmarking
+
 ## Intermediate Installation
 
 ### Prerequisites
