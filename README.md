@@ -1,6 +1,6 @@
 # Misago Deployment
 
-This repository is the result of the execution of the last Systems Deployment and Benchmarking (2020/2021) practical assignment. It consists of automating the deployment and monitoring of a web-based multi-layer application called [Misago](https://misago-project.org) and, also, develop benchmarking routines to test the deployed infrastructure.
+This repository is the result of the execution of the last System Deployment and Benchmarking (2020/2021) practical assignment. The assignment consists of automating the deployment and monitoring of a web-based multi-layer application called [Misago](https://misago-project.org), as well as the development of benchmarking routines to benchmark the deployed application.
 
 ## Full Deployment
 
@@ -11,7 +11,7 @@ This repository is the result of the execution of the last Systems Deployment an
 -   [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
 -   [Python 3](https://www.python.org/downloads)
 -   [pip3](https://pip.pypa.io/en/stable/installing/)
--   Google Cloud Auth Credentials (JSON)
+-   Google Cloud Service Account (in JSON format), with permissions to manage networking interfaces and Cloud Compute VMs (a disabled example is provided)
 
 #### Installation
 
@@ -24,13 +24,13 @@ ansible-galaxy collection install community.general
 
 #### Execution
 
--   To run a full provisioning (creates all VMs, installs docker, monitoring tools & deploys a stack):
+-   To run a full provisioning (which creates all VMs, then installs all of the required components on them):
 
     ```bash
     ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "create-vms,provision"
     ```
 
--   To delete the VMs after testing that this does indeed work:
+-   To delete the VMs (and, by extension, terminate the deployment):
 
     ```bash
     ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "delete-vms"
@@ -40,9 +40,9 @@ ansible-galaxy collection install community.general
 
     -   Available services:
 
-        -   web - default 3
-        -   celery - default 1
-        -   misago - default 3
+        -   web - default of 3 replicas
+        -   celery - default of 1 replica
+        -   misago - default of 3 replicas
 
     -   Examples:
         ```bash
@@ -52,19 +52,19 @@ ansible-galaxy collection install community.general
 
 ### Orchestration
 
-The orchestration was done based on [Docker](https://www.docker.com) and [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy). This phase of deployment was the result of the improvement of the work described in the [Intermediate Installation section](#intermediate-installation).
+The orchestration system used in this assignment is [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy). This phase of deployment is the result improving the work described in the [Intermediate Installation section](#intermediate-installation).
 
 ### Provisiong
 
-The entire infrastructure uses [GCP](https://cloud.google.com) and to automate the whole process of provision and configuration, we use [Ansible](https://www.ansible.com).
+This deployment uses [Ansible](https://www.ansible.com) and to automate provisioning and configuration of the application on [Google Cloud Platform](https://cloud.google.com).
 
 ### Monitoring
 
-Monitoring was implemented with [ELK Stack](https://www.elastic.co/what-is/elk-stack), more specifically: [ElasticSearch](https://www.elastic.co/elasticsearch), [Kibana](https://www.elastic.co/kibana) and [Beats](https://www.elastic.co/beats).
+Monitoring uses the [ELK Stack](https://www.elastic.co/what-is/elk-stack): [ElasticSearch](https://www.elastic.co/elasticsearch), [Kibana](https://www.elastic.co/kibana) and [Beats](https://www.elastic.co/beats).
 
 ### Benchmarking
 
-The deployment was evaluated/tested with benchmarking mechanisms, including loading tests. Those testes era implemented with [Apache Jmeter](https://jmeter.apache.org) and are available in the [benchmarking folder](benchmarking).
+This deployment was benchmarked with [Apache Jmeter](https://jmeter.apache.org) and the benchmarking scripts are available in the [benchmarking folder](benchmarking).
 
 ## Intermediate Installation
 
