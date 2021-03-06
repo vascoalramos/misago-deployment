@@ -2,7 +2,9 @@
 
 ## Full Deployment
 
-### Orquestration
+### Orchestration
+
+The orchestration was done based on [Docker](https://www.docker.com) and [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy). This phase of deployment was the result of the improvement of the work described in the [Intermediate Installation section](#intermediate-installation).
 
 ### Provisiong
 
