@@ -52,11 +52,11 @@ ansible-galaxy collection install community.general
 
 ### Orchestration
 
-The orchestration system used in this assignment is [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy). This phase of deployment is the result improving the work described in the [Intermediate Installation section](#intermediate-installation).
+The orchestration tool used in this assignment is [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy). This phase of deployment is the result of improving the work described in the [Intermediate Installation section](#intermediate-installation).
 
 ### Provisiong
 
-This deployment uses [Ansible](https://www.ansible.com) and to automate provisioning and configuration of the application on [Google Cloud Platform](https://cloud.google.com).
+This deployment uses [Ansible](https://www.ansible.com) to automate provisioning and configuration of the application on [Google Cloud Platform](https://cloud.google.com).
 
 ### Monitoring
 
