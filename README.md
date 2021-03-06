@@ -1,5 +1,7 @@
 # Misago Deployment
 
+This repository is the result of the execution of the last Systems Deployment and Benchmarking (2020/2021) practical assignment. It consists of automating the deployment and monitoring of a web-based multi-layer application called [Misago](https://misago-project.org) and, also, develop benchmarking routines to test the deployed infrastructure.
+
 ## Full Deployment
 
 ### How to Run
