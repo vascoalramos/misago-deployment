@@ -10,6 +10,8 @@
 
 ### Benchmarking
 
+The deployment was evaluated/tested with benchmarking mechanisms, including loading tests. Those testes era implemented with [Apache Jmeter](https://jmeter.apache.org) and are available in the [benchmarking folder](benchmarking).
+
 ## Intermediate Installation
 
 ### Prerequisites
