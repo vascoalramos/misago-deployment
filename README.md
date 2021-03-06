@@ -1,5 +1,69 @@
 # Misago Deployment
 
+## Full Deployment
+
+### How to Run
+
+#### Prerequisites
+
+-   [Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+-   [Python 3](https://www.python.org/downloads)
+-   [pip3](https://pip.pypa.io/en/stable/installing/)
+-   Google Cloud Auth Credentials (JSON)
+
+#### Installation
+
+```bash
+pip3 install requests google-auth
+ansible-galaxy collection install google.cloud
+ansible-galaxy collection install ansible.posix
+ansible-galaxy collection install community.general
+```
+
+#### Execution
+
+-   To run a full provisioning (creates all VMs, installs docker, monitoring tools & deploys a stack):
+
+    ```bash
+    ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "create-vms,provision"
+    ```
+
+-   To delete the VMs after testing that this does indeed work:
+
+    ```bash
+    ANSIBLE_CONFIG=ansible.cfg ansible-playbook playbook.yml --tags "delete-vms"
+    ```
+
+-   To scale up or down a service:
+
+    -   Available services:
+
+        -   web - default 3
+        -   celery - default 1
+        -   misago - default 3
+
+    -   Examples:
+        ```bash
+        ANSIBLE_CONFIG=ansible.cfg ansible-playbook -i hosts.gcp.yml scale.yml -e "web=3"
+        ANSIBLE_CONFIG=ansible.cfg ansible-playbook -i hosts.gcp.yml scale.yml -e "web=3 celery=1 misago=3"
+        ```
+
+### Orchestration
+
+The orchestration was done based on [Docker](https://www.docker.com) and [Docker Swarm](https://docs.docker.com/get-started/swarm-deploy). This phase of deployment was the result of the improvement of the work described in the [Intermediate Installation section](#intermediate-installation).
+
+### Provisiong
+
+The entire infrastructure uses [GCP](https://cloud.google.com) and to automate the whole process of provision and configuration, we use [Ansible](https://www.ansible.com).
+
+### Monitoring
+
+Monitoring was implemented with [ELK Stack](https://www.elastic.co/what-is/elk-stack), more specifically: [ElasticSearch](https://www.elastic.co/elasticsearch), [Kibana](https://www.elastic.co/kibana) and [Beats](https://www.elastic.co/beats).
+
+### Benchmarking
+
+The deployment was evaluated/tested with benchmarking mechanisms, including loading tests. Those testes era implemented with [Apache Jmeter](https://jmeter.apache.org) and are available in the [benchmarking folder](benchmarking).
+
 ## Intermediate Installation
 
 ### Prerequisites
