@@ -8,6 +8,8 @@
 
 ### Monitoring
 
+Monitoring was implemented with [ELK Stack](https://www.elastic.co/what-is/elk-stack), more specifically: [ElasticSearch](https://www.elastic.co/elasticsearch), [Kibana](https://www.elastic.co/kibana) and [Beats](https://www.elastic.co/beats).
+
 ### Benchmarking
 
 The deployment was evaluated/tested with benchmarking mechanisms, including loading tests. Those testes era implemented with [Apache Jmeter](https://jmeter.apache.org) and are available in the [benchmarking folder](benchmarking).
